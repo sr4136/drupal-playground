@@ -36,7 +36,7 @@ class HelloController {
 	public function content($context = 'controller') {
 		$name = $this->getCurrentUserName(); // Get the user's name.
 
-		$output_structure = 'From all of us at [@context]: Hello world, and specifically <strong><i>@name</i></strong>!';
+		$output_structure = 'From all of us at [@context context]: HELLO WORLD, and specifically <strong><i>@name</i></strong>!';
 		$output_vars = ['@name' => $name, '@context' => $context];
 		$output_translated = t($output_structure, $output_vars);
 
