@@ -1,0 +1,26 @@
+name: sr_theme
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - sr_theme/base
+  - sr_theme/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - sr_theme/user
+  core/drupal.dropbutton:
+    - sr_theme/dropbutton
+  core/drupal.dialog:
+    - sr_theme/dialog
+  file/drupal.file:
+    - sr_theme/file
+  core/drupal.item-list:
+    - sr_theme/item-list
+  core/drupal.progress:
+    - sr_theme/progress
+  core/drupal.tablesort:
+    - sr_theme/drupal.tablesort
+description: ''
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.3.5'
