@@ -78,10 +78,9 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+	{% if page.footer %}
+		{% include '@stever/layout/footer.html.twig' %}
+	{% endif %}
+
 
 </div>{# /.layout-container #}
