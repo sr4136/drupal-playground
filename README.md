@@ -1,5 +1,7 @@
 # Environment & Setup:
 
+(On a Windows 11 computer with WSL.)
+
 1. Install Docker
     - https://www.drupal.org/docs/getting-started/installing-drupal/install-drupal-using-ddev-for-local-development
     - BUT FIRST, specifically install Ubuntu
@@ -62,17 +64,18 @@
 
 # My Changes & Customizations:
 
-- Steve's Hello World module
-  - `/web/modules/hello_world`
-  - Custom Hello controller & block. 
-    - the block pulls the content from the controller
-    - both are context aware (am I being called from block or controller?)
+0. Added `devel` and `kint` for debugging
+
+1. Steve's Hello World module
+  - [Custom router](https://github.com/sr4136/drupal-playground/blob/main/modules/hello_world.routing.yml) to "add a page" at `/hello`
+  - [Custom controller](https://github.com/sr4136/drupal-playground/blob/main/modules/src/Controller/HelloController.php)
+    - Pulls the [logged in user's name](https://github.com/sr4136/drupal-playground/blob/main/modules/src/Controller/HelloController.php#L17-L33) (defaults to "Anonymous" if not) to say hello
+  - [Custom block](https://github.com/sr4136/drupal-playground/blob/main/modules/src/Plugin/Block/HelloBlock.php) to be placed in a Block Layout, say the Footer.
+    - the block [pulls the content from the controller](https://github.com/sr4136/drupal-playground/blob/main/modules/src/Plugin/Block/HelloBlock.php#L22-L23)
+  - Both controller and block are context aware (am I being called from [block](https://github.com/sr4136/drupal-playground/blob/main/modules/src/Plugin/Block/HelloBlock.php#L23) or [controller](https://github.com/sr4136/drupal-playground/blob/main/modules/src/Controller/HelloController.php#L36)?)
 	
-- Custom theme via starterkit
-  - https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme
-  - Breaks the footer template out of page.html.twig into footer.html.twig
-    - utilized function in stever.theme
-  - Custom template for Hello block
-    - and function in stever.theme to pass data to the block template
-		
-- Added `devel` and `kint` for debugging
+2. Custom theme via [starterkit](https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme)
+  - Template override to break the footer template out of [page.html.twig](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/templates/layout/page.html.twig#L81-L83) into [footer.html.twig](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/templates/layout/footer.html.twig)
+  - [Custom template](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/templates/block/block--stever-helloworldblock.html.twig) for Hello block
+    - and function in sr_theme.theme to [pass title data to the block template](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/sr_theme.theme#L24-L32)
+	
