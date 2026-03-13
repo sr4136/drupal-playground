@@ -2,6 +2,7 @@ base:
   version: VERSION
   css:
     component:
+      css/components/sr-hello.css: {}
       css/components/action-links.css:
         weight: -10
       css/components/breadcrumb.css:

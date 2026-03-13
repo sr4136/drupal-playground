@@ -1,0 +1,22 @@
+html {
+    --gray: #ccc;
+    --black: #000;
+    --green: #385;
+    --blue: #358;
+}
+
+/* Default styling. */
+.block-stever-helloworld {
+    padding: 1em;
+    margin: 1em;
+    border-left: 5px solid var(--green);
+    outline: 1px solid var(--gray);
+}
+
+/* Context-specific styling. */
+.block-stever-helloworld.context-block {
+    border-color: var(--green);
+}
+.block-stever-helloworld.context-controller {
+    border-color: var(--blue);
+}
