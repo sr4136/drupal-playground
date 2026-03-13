@@ -1,3 +1,4 @@
+
 {% set additional_classes = ['block-stever-helloworld', 'stever-helloworld'] %}
 
 {% if content['#additional_data'] is defined and content['#additional_data'].context is defined %}
@@ -6,8 +7,8 @@
 {% endif %}
 
 <div{{ attributes.addClass(additional_classes) }}>
-    {% if block_title %}
-        <h2><i>{{ block_title }} via custom template!</i></h2>
+    {% if label is defined %}
+        <h2>{{ label }}</h2>
     {% endif %}
     <div class="content">
         {{ content }}

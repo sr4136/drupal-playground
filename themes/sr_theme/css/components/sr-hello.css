@@ -12,6 +12,9 @@ html {
     border-left: 5px solid var(--green);
     outline: 1px solid var(--gray);
 }
+.block-stever-helloworld h2 {
+    margin-top: 0;
+}
 
 /* Context-specific styling. */
 .block-stever-helloworld.context-block {

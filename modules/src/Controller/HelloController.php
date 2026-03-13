@@ -22,6 +22,7 @@ class HelloController {
         $output_translated = t($output_structure, $output_vars);
 
         // Update the render array to match block output
+        // Q: can I retrieve the "default" id/class to output/add?
         return [
             '#type' => 'container',
             '#attributes' => [
