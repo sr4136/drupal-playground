@@ -32,7 +32,7 @@
 8. Activate theme, transfer custom files, activate modules, set placeholder content
     - Admin > Config > Dev Settings > Twig dev mode, etc.
     - Admin > Appearance > Install sr_theme and set as default
-    - Files: Create new folder in `/modules` called `hello_world`, copy contents of GH repo into it
+    - Files: copy contents of GH repo: `modules/hello_world` and `themes/sr_theme`
     - Admin > Extend > Custom: activate Hello World
 	
 9. Now, a new route is available at `https://my-drupal-site.ddev.site/hello`
