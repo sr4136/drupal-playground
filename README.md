@@ -1,5 +1,7 @@
 # My Changes & Customizations:
 
+Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steverudolfi.com/misc/drupal/hello)
+
 1. Hello World module
 	  - [Custom router](https://github.com/sr4136/drupal-playground/blob/main/modules/hello_world.routing.yml) to "add a page" at `/hello`
 	  - [Custom controller](https://github.com/sr4136/drupal-playground/blob/main/modules/src/Controller/HelloController.php)
@@ -10,8 +12,13 @@
 	
 2. Custom theme via [starterkit](https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme)
   	- Template override to break the footer template out of [page.html.twig](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/templates/layout/page.html.twig#L81-L83) into [footer.html.twig](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/templates/layout/footer.html.twig)
-  	- [Custom template](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/templates/block/block--stever-helloworldblock.html.twig) for Hello block
-    	- and function in sr_theme.theme to [pass title data to the block template](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/sr_theme.theme#L24-L32)
+  	- [Custom template](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/templates/block/block--hello-world-block.html.twig) for Hello block
+    	- and function in `sr_theme.theme` to [pass title data to the block template](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/sr_theme.theme#L24-L32)
+     	- including outputting classes to designate the context (`.context-block` and `.context-controller`) to style accordingly
+	- [Added](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/sr_theme.libraries.yml#L5) some [custom styles for the hello block](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/css/components/sr-hello.css)
+ 	- <img width="980" height="484" alt="firefox_qs3RrlaWWv" src="https://github.com/user-attachments/assets/9f816d25-1415-4f83-bd9a-1c41ea62e399" />
+
+
 	
 # Environment & Setup:
 
