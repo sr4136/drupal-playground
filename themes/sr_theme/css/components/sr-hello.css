@@ -1,8 +1,17 @@
-html {
+/* Global Vars */
+.block-stever-helloworld {
     --gray: #ccc;
     --black: #000;
     --green: #385;
     --blue: #358;
+}
+
+/* Giving the body some padding despite the !importants */
+body {
+    padding: 2em !important;
+}
+body.user-logged-in {
+    padding: 8em 2em 2em 2em !important;
 }
 
 /* Default styling. */
