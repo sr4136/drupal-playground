@@ -1,0 +1,48 @@
+/**
+ * @file
+ * Visual styles for exposed filters.
+ */
+
+@use "../base/variables" as v;
+
+.exposed-filters .filters {
+  float: left; /* LTR */
+  margin-right: v.$space-md; /* LTR */
+}
+[dir="rtl"] .exposed-filters .filters {
+  float: right;
+  margin-right: v.$space-0;
+  margin-left: v.$space-md;
+}
+.exposed-filters .form-item {
+  margin: v.$space-0 v.$space-0 v.$space-6xs v.$space-0;
+  padding: v.$space-0;
+}
+.exposed-filters .form-item label {
+  float: left; /* LTR */
+  width: v.$size-filter-label;
+  font-weight: normal;
+}
+[dir="rtl"] .exposed-filters .form-item label {
+  float: right;
+}
+.exposed-filters .form-select {
+  width: v.$size-filter-select;
+}
+/* Current filters */
+.exposed-filters .current-filters {
+  margin-bottom: v.$space-md;
+}
+.exposed-filters .current-filters .placeholder {
+  font-weight: bold;
+  font-style: normal;
+}
+.exposed-filters .additional-filters {
+  float: left; /* LTR */
+  margin-right: v.$space-md; /* LTR */
+}
+[dir="rtl"] .exposed-filters .additional-filters {
+  float: right;
+  margin-right: v.$space-0;
+  margin-left: v.$space-md;
+}

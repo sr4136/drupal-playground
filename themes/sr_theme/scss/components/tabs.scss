@@ -1,0 +1,35 @@
+/**
+ * @file
+ * Visual styles for tabs.
+ */
+
+@use "../base/variables" as v;
+
+div.tabs {
+  margin: v.$space-md v.$space-0;
+}
+ul.tabs {
+  margin: v.$space-0 v.$space-0 v.$space-sm;
+  padding: v.$space-0;
+  list-style: none;
+}
+.tabs > li {
+  display: inline-block;
+  margin-right: v.$space-xs; /* LTR */
+}
+[dir="rtl"] .tabs > li {
+  margin-right: v.$space-0;
+  margin-left: v.$space-xs;
+}
+.tabs a {
+  display: block;
+  padding: v.$space-2xs v.$space-md;
+  text-decoration: none;
+}
+.tabs a.is-active {
+  background-color: v.$color-bg-tab-active;
+}
+.tabs a:focus,
+.tabs a:hover {
+  background-color: v.$color-bg-tab-hover;
+}

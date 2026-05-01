@@ -1,0 +1,27 @@
+/**
+ * @file
+ * Visual styles for fields.
+ */
+
+@use "../base/variables" as v;
+
+.field__label {
+  font-weight: bold;
+}
+.field--label-inline .field__label,
+.field--label-inline .field__items {
+  float: left; /* LTR */
+}
+.field--label-inline .field__label,
+.field--label-inline > .field__item,
+.field--label-inline .field__items {
+  padding-right: v.$space-sm;
+}
+[dir="rtl"] .field--label-inline .field__label,
+[dir="rtl"] .field--label-inline .field__items {
+  padding-right: v.$space-0;
+  padding-left: v.$space-sm;
+}
+.field--label-inline .field__label::after {
+  content: ":";
+}

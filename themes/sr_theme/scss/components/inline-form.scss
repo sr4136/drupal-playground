@@ -1,0 +1,35 @@
+/**
+ * @file
+ * Visual styles for inline forms.
+ */
+
+@use "../base/variables" as v;
+
+.form--inline .form-item {
+  float: left; /* LTR */
+  margin-right: v.$space-sm; /* LTR */
+}
+[dir="rtl"] .form--inline .form-item {
+  float: right;
+  margin-right: v.$space-0;
+  margin-left: v.$space-sm;
+}
+/* This is required to win over specificity of [dir="rtl"] .form--inline .form-item */
+[dir="rtl"] .views-filterable-options-controls .form-item {
+  margin-right: v.$percent-controls-offset;
+}
+.form--inline .form-item-separator {
+  margin-top: v.$form-separator-offset;
+  margin-right: v.$space-md; /* LTR */
+  margin-left: v.$space-sm; /* LTR */
+}
+[dir="rtl"] .form--inline .form-item-separator {
+  margin-right: v.$space-sm;
+  margin-left: v.$space-md;
+}
+.form--inline .form-actions {
+  clear: left; /* LTR */
+}
+[dir="rtl"] .form--inline .form-actions {
+  clear: right;
+}

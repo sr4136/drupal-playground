@@ -1,0 +1,12 @@
+{
+  "name": "sr_theme",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass --source-map scss/components:css/components",
+    "watch": "sass --watch --source-map scss/components:css/components"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

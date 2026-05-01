@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Image upload widget.
+ */
+
+@use "../base/variables" as v;
+
+.image-preview {
+  float: left; /* LTR */
+  padding: v.$space-0 v.$message-icon-offset-x v.$message-icon-offset-x v.$space-0; /* LTR */
+}
+[dir="rtl"] .image-preview {
+  float: right;
+  padding: v.$space-0 v.$space-0 v.$message-icon-offset-x v.$message-icon-offset-x;
+}
+.image-widget-data {
+  float: left; /* LTR */
+}
+[dir="rtl"] .image-widget-data {
+  float: right;
+}
+.image-widget-data .text-field {
+  width: auto;
+}

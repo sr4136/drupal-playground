@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Collapsible details.
+ *
+ * @see collapse.js
+ * @see http://nicolasgallagher.com/css-background-image-hacks/
+ */
+
+@use "../base/variables" as v;
+
+details {
+  margin-top: v.$space-md;
+  margin-bottom: v.$space-md;
+  border: v.$border-width-sm solid v.$border-color-neutral;
+}
+details > .details-wrapper {
+  padding: v.$space-sm v.$space-lg;
+}
+summary {
+  padding: v.$space-2xs v.$space-sm;
+  cursor: pointer;
+}

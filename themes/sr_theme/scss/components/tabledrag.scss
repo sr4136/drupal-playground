@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Visual styles for table drag.
+ */
+
+@use "../base/variables" as v;
+
+tr.drag {
+  background-color: v.$color-drag-current;
+}
+tr.drag-previous {
+  background-color: v.$color-drag-previous;
+}
+body div.tabledrag-changed-warning {
+  margin-bottom: v.$space-sm;
+}

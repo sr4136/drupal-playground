@@ -1,0 +1,69 @@
+/**
+ * @file
+ * Theme styling for user module.
+ */
+
+@use "../base/variables" as v;
+
+/* Visual styling for the Password strength indicator */
+.password-strength__meter {
+  margin-top: v.$space-sm;
+  background-color: v.$color-password-meter;
+}
+.password-strength__indicator {
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+  background-color: v.$color-password-good;
+}
+.password-strength__indicator.is-weak {
+  background-color: v.$color-password-weak;
+}
+.password-strength__indicator.is-fair {
+  background-color: v.$color-password-fair;
+}
+.password-strength__indicator.is-good {
+  background-color: v.$color-password-strong;
+}
+.password-strength__indicator.is-strong {
+  background-color: v.$color-password-good;
+}
+
+.password-confirm,
+.password-field,
+.password-strength,
+.password-confirm-match,
+.password-confirm-message {
+  width: 55%;
+}
+
+.password-suggestions {
+  max-width: 34.7em;
+  margin: 0.7em 0;
+  padding: v.$space-2xs v.$space-sm;
+  border: v.$border-width-sm solid v.$color-border-weak;
+}
+.password-suggestions ul {
+  margin-bottom: 0;
+}
+
+.confirm-parent,
+.password-parent {
+  clear: left; /* LTR */
+  overflow: hidden;
+  max-width: 33em;
+  margin: v.$space-0;
+}
+[dir="rtl"] .confirm-parent,
+[dir="rtl"] .password-parent {
+  clear: right;
+}
+
+/* Styling for the status indicator of the passwords match test.  */
+.password-confirm .ok {
+  color: v.$text-color-success;
+  font-weight: bold;
+}
+.password-confirm .error {
+  color: v.$text-color-error-dark;
+  font-weight: bold;
+}

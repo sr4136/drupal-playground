@@ -1,0 +1,34 @@
+/**
+ * @file
+ * Visual styles for item list.
+ */
+
+@use "../base/variables" as v;
+
+.item-list .title {
+  font-weight: bold;
+}
+.item-list ul {
+  margin: v.$space-0 v.$space-0 v.$space-md-plus v.$space-0;
+  padding: v.$space-0;
+}
+.item-list li {
+  margin: v.$space-0 v.$space-0 v.$space-5xs v.$space-lg; /* LTR */
+  padding: v.$space-0;
+}
+[dir="rtl"] .item-list li {
+  margin: v.$space-0 v.$space-lg v.$space-5xs v.$space-0;
+}
+
+/**
+ * Comma separated lists.
+ */
+.item-list--comma-list {
+  display: inline;
+}
+.item-list--comma-list .item-list__comma-list,
+.item-list__comma-list li,
+[dir="rtl"] .item-list--comma-list .item-list__comma-list,
+[dir="rtl"] .item-list__comma-list li {
+  margin: v.$space-0;
+}

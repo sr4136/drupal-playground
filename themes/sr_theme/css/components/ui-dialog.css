@@ -2,7 +2,6 @@
  * @file
  * Styles for modal windows.
  */
-
 .ui-dialog--narrow {
   max-width: 500px;
 }
@@ -13,3 +12,5 @@
     max-width: 95%;
   }
 }
+
+/*# sourceMappingURL=ui-dialog.css.map */

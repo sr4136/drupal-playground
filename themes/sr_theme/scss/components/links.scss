@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Visual styles for links.
+ */
+
+@use "../base/variables" as v;
+
+ul.inline,
+ul.links.inline {
+  display: inline;
+  padding-left: v.$space-0; /* LTR */
+}
+[dir="rtl"] ul.inline,
+[dir="rtl"] ul.links.inline {
+  padding-right: v.$space-0;
+  padding-left: v.$rtl-inline-reset;
+}
+ul.inline li {
+  display: inline;
+  padding: v.$space-0 v.$space-sm;
+  list-style-type: none;
+}
+ul.links a.is-active {
+  color: v.$text-color-active;
+}

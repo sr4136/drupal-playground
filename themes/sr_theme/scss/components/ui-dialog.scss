@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Styles for modal windows.
+ */
+
+@use "../base/variables" as v;
+
+.ui-dialog--narrow {
+  max-width: v.$size-dialog-narrow-max;
+}
+
+@media screen and (max-width: v.$size-dialog-narrow-breakpoint) {
+  .ui-dialog--narrow {
+    min-width: v.$size-dialog-narrow-mobile;
+    max-width: v.$size-dialog-narrow-mobile;
+  }
+}

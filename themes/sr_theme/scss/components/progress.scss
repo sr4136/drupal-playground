@@ -1,0 +1,60 @@
+/**
+ * @file
+ * Visual styles for progress bar.
+ *
+ * @see progress.js
+ */
+
+@use "../base/variables" as v;
+
+.progress__track {
+  border-color: v.$color-border-mid;
+  border-radius: 10em;
+  background-color: v.$color-progress-track;
+  background-image: linear-gradient(v.$color-progress-track-grad-start, v.$color-progress-track-grad-end);
+  box-shadow: inset 0 1px 3px hsl(0, 0%, 0%, 0.16);
+}
+.progress__bar {
+  height: v.$size-icon-md;
+  margin-top: -1px;
+  margin-left: -1px; /* LTR */
+  padding: 0 1px;
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+  -webkit-animation: animate-stripes 3s linear infinite;
+  border: 1px v.$color-progress-border solid;
+  border-radius: 10em;
+  background: v.$color-progress-bar;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.15)), linear-gradient(to right bottom, v.$color-progress-stripe-light 0%, v.$color-progress-stripe-light 25%, v.$color-progress-stripe-dark 25%, v.$color-progress-stripe-dark 50%, v.$color-progress-stripe-light 50%, v.$color-progress-stripe-light 75%, v.$color-progress-stripe-light 100%);
+  background-size: v.$size-progress-bg v.$size-progress-bg;
+}
+[dir="rtl"] .progress__bar {
+  margin-right: -1px;
+  margin-left: 0;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .progress__bar {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-animation: none;
+  }
+}
+
+/**
+ * Progress bar animations.
+ */
+@keyframes animate-stripes {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      0 0,
+      v.$size-progress-anim 0;
+  }
+}

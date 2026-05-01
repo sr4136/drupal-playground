@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../scss/components/tabs.scss","../../scss/base/_spacing.scss","../../scss/base/_colors.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAAA;AAOA;EACE;;;AAEF;EACE;EACA,SCZQ;EDaR;;;AAEF;EACE;EACA,cCTS,ODSkB;;;AAE7B;EACE,cCpBQ;EDqBR,aCbS;;;ADeX;EACE;EACA;EACA;;;AAEF;EACE,kBEYoB;;;AFVtB;AAAA;EAEE,kBESmB","file":"tabs.css"}

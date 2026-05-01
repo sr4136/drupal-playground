@@ -1,0 +1,45 @@
+/**
+ * @file
+ * Styles for link buttons and action links.
+ */
+
+@use "../base/variables" as v;
+
+.action-links {
+  margin: v.$space-md v.$space-0;
+  padding: v.$space-0;
+  list-style: none;
+}
+[dir="rtl"] .action-links {
+  /* This is required to win over specificity of [dir="rtl"] ul */
+  margin-right: 0;
+}
+.action-links li {
+  display: inline-block;
+  margin: v.$space-0 v.$space-xs;
+}
+.action-links li:first-child {
+  margin-left: v.$space-0; /* LTR */
+}
+[dir="rtl"] .action-links li:first-child {
+  margin-right: v.$space-0;
+  margin-left: v.$space-xs;
+}
+.button-action {
+  display: inline-block;
+  padding: v.$space-2xs v.$space-sm v.$space-xs;
+  text-decoration: none;
+  line-height: v.$line-height-loose;
+}
+.button-action::before {
+  margin-left: v.$offset-xs-neg; /* LTR */
+  padding-right: v.$space-2xs; /* LTR */
+  content: "+";
+  font-weight: 900;
+}
+[dir="rtl"] .button-action::before {
+  margin-right: v.$offset-xs-neg;
+  margin-left: v.$space-0;
+  padding-right: v.$space-0;
+  padding-left: v.$space-2xs;
+}

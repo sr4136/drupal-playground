@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Global styles loaded on every page.
+ */
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    &.user-logged-in{
+        margin-top: 1em;
+    }
+}

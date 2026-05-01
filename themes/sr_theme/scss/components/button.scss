@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Visual styles for buttons.
+ */
+
+@use "../base/variables" as v;
+
+.button,
+.image-button {
+  margin-right: v.$space-md;
+  margin-left: v.$space-md;
+}
+.button:first-child,
+.image-button:first-child {
+  margin-right: v.$space-0;
+  margin-left: v.$space-0;
+}

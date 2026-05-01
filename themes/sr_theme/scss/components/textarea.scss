@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Visual styles for a resizable textarea.
+ */
+
+@use "../base/variables" as v;
+
+.form-textarea-wrapper textarea {
+  display: block;
+  box-sizing: border-box;
+  width: v.$size-full;
+  margin: v.$space-0;
+}

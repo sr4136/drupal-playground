@@ -1,0 +1,75 @@
+/**
+ * @file
+ * Presentational styles for Drupal dialogs.
+ */
+
+@use "../base/variables" as v;
+
+.ui-dialog {
+  position: absolute;
+  z-index: 1260;
+  overflow: visible;
+  padding: v.$space-0;
+  color: v.$text-color-active;
+  border: solid v.$border-width-sm v.$color-border-light;
+  background: v.$color-dialog-bg;
+}
+
+@media all and (max-width: 48em) {
+  /* 768px */
+  .ui-dialog {
+    width: 92% !important;
+  }
+}
+.ui-dialog .ui-dialog-titlebar {
+  border-width: v.$space-0 v.$space-0 v.$border-width-sm v.$space-0;
+  border-style: solid;
+  border-color: v.$color-border-light;
+  border-radius: v.$space-0;
+  background: v.$color-dialog-title-bg;
+  font-weight: bold;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  border: v.$space-0;
+  background: none;
+}
+.ui-dialog .ui-dialog-buttonpane {
+  margin-top: v.$space-0;
+  padding: v.$space-xs v.$space-md;
+  border-width: v.$border-width-sm v.$space-0 v.$space-0 v.$space-0;
+  border-color: v.$color-border-light;
+  background: v.$color-dialog-title-bg;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  margin: v.$space-0;
+  padding: v.$space-0;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button-text-only .ui-button-text {
+  padding: v.$space-0;
+}
+
+/* Form action buttons are moved in dialogs. Remove empty space. */
+.ui-dialog .ui-dialog-content .form-actions {
+  margin: v.$space-0;
+  padding: v.$space-0;
+}
+.ui-dialog .ajax-progress-throbber {
+  position: fixed;
+  z-index: 1000;
+  top: 48.5%;
+  /* Can't do center:50% middle: 50%, so approximate it for a typical window size. */
+  left: 49%;
+  width: v.$size-loader;
+  height: v.$size-loader;
+  padding: v.$space-px-4;
+  opacity: 0.9;
+  border-radius: v.$radius-md;
+  background-color: v.$color-throbber-bg;
+  background-image: url(../../images/icons/loading-small.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.ui-dialog .ajax-progress-throbber .throbber,
+.ui-dialog .ajax-progress-throbber .message {
+  display: none;
+}

@@ -1,0 +1,35 @@
+/**
+ * @file
+ * General styles for dropbuttons.
+ */
+
+@use "../base/variables" as v;
+
+.js .dropbutton-widget {
+  border: v.$border-width-sm solid v.$color-border-light;
+  background-color: v.$text-color-base-inverse;
+}
+.js .dropbutton-widget:hover {
+  border-color: v.$color-border-hover;
+}
+.dropbutton .dropbutton-action > * {
+  padding: v.$space-6xs v.$space-sm;
+  white-space: nowrap;
+}
+.dropbutton .secondary-action {
+  border-top: v.$border-width-sm solid v.$color-border-lighter;
+}
+.dropbutton-multiple .dropbutton {
+  border-right: v.$border-width-sm solid v.$color-border-lighter; /* LTR */
+}
+[dir="rtl"] .dropbutton-multiple .dropbutton {
+  border-right: v.$space-0 none;
+  border-left: v.$border-width-sm solid v.$color-border-lighter;
+}
+.dropbutton-multiple .dropbutton .dropbutton-action > * {
+  margin-right: v.$space-5xs; /* LTR */
+}
+[dir="rtl"] .dropbutton-multiple .dropbutton .dropbutton-action > * {
+  margin-right: 0;
+  margin-left: v.$space-5xs;
+}

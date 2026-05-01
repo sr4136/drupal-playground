@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Basic styling for comment module.
+ */
+
+@use "../base/variables" as v;
+
+/**
+ * Indent threaded comments.
+ */
+.indented {
+  margin-left: v.$size-comments-indent; /* LTR */
+}
+[dir="rtl"] .indented {
+  margin-right: v.$size-comments-indent;
+  margin-left: v.$space-0;
+}

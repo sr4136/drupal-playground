@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Inline items.
+ */
+
+@use "../base/variables" as v;
+
+.container-inline label::after,
+.container-inline .label::after {
+  content: ":";
+}
+.form-type-radios .container-inline label::after,
+.form-type-checkboxes .container-inline label::after {
+  content: "";
+}
+.form-type-radios .container-inline .form-type-radio,
+.form-type-checkboxes .container-inline .form-type-checkbox {
+  margin: v.$space-0 v.$space-md;
+}
+.container-inline .form-actions,
+.container-inline.form-actions {
+  margin-top: v.$space-0;
+  margin-bottom: v.$space-0;
+}

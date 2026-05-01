@@ -1,0 +1,71 @@
+/**
+ * @file
+ * Styles for system messages.
+ */
+
+@use "../base/variables" as v;
+
+.messages {
+  padding: v.$rtl-inline-reset v.$space-xl v.$rtl-inline-reset v.$space-2xl; /* LTR */
+  word-wrap: break-word;
+  border: v.$border-width-sm solid;
+  border-width: v.$border-width-sm v.$border-width-sm v.$border-width-sm v.$space-0; /* LTR */
+  border-radius: v.$radius-sm;
+  background: no-repeat v.$message-icon-offset-x v.$message-icon-offset-y; /* LTR */
+  overflow-wrap: break-word;
+}
+[dir="rtl"] .messages {
+  padding-right: v.$space-2xl;
+  padding-left: v.$space-xl;
+  text-align: right;
+  border-width: v.$border-width-sm v.$space-0 v.$border-width-sm v.$border-width-sm;
+  background-position: right v.$message-icon-offset-x top v.$message-icon-offset-y;
+}
+.messages + .messages {
+  margin-top: v.$message-stack-gap;
+}
+.messages__list {
+  margin: v.$space-0;
+  padding: v.$space-0;
+  list-style: none;
+}
+.messages__item + .messages__item {
+  margin-top: v.$message-item-gap;
+}
+.messages--status {
+  color: v.$text-color-success;
+  border-color: v.$color-message-status-border v.$color-message-status-border v.$color-message-status-border transparent; /* LTR */
+  background-color: v.$color-message-status-bg;
+  background-image: url(../../images/icons/check.svg);
+  box-shadow: -1 * v.$message-accent-shadow 0 0 v.$color-password-good; /* LTR */
+}
+[dir="rtl"] .messages--status {
+  margin-left: v.$space-0;
+  border-color: v.$color-message-status-border transparent v.$color-message-status-border v.$color-message-status-border;
+  box-shadow: v.$message-accent-shadow 0 0 v.$color-password-good;
+}
+.messages--warning {
+  color: v.$text-color-warning-dark;
+  border-color: v.$color-message-warning-border v.$color-message-warning-border v.$color-message-warning-border transparent; /* LTR */
+  background-color: v.$color-message-warning-bg;
+  background-image: url(../../images/icons/warning.svg);
+  box-shadow: -1 * v.$message-accent-shadow 0 0 v.$color-password-fair; /* LTR */
+}
+[dir="rtl"] .messages--warning {
+  border-color: v.$color-message-warning-border transparent v.$color-message-warning-border v.$color-message-warning-border;
+  box-shadow: v.$message-accent-shadow 0 0 v.$color-password-fair;
+}
+.messages--error {
+  color: v.$text-color-error-dark;
+  border-color: v.$color-message-error-border v.$color-message-error-border v.$color-message-error-border transparent; /* LTR */
+  background-color: v.$color-message-error-bg;
+  background-image: url(../../images/icons/error.svg);
+  box-shadow: -1 * v.$message-accent-shadow 0 0 v.$color-password-weak; /* LTR */
+}
+[dir="rtl"] .messages--error {
+  border-color: v.$color-message-error-border transparent v.$color-message-error-border v.$color-message-error-border;
+  box-shadow: v.$message-accent-shadow 0 0 v.$color-password-weak;
+}
+.messages--error p.error {
+  color: v.$text-color-error-dark;
+}

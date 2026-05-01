@@ -2,26 +2,30 @@
  * @file
  * Theme styling for user module.
  */
-
 /* Visual styling for the Password strength indicator */
 .password-strength__meter {
   margin-top: 0.5em;
   background-color: #ebeae4;
 }
+
 .password-strength__indicator {
   -webkit-transition: width 0.5s ease-out;
   transition: width 0.5s ease-out;
   background-color: #77b259;
 }
+
 .password-strength__indicator.is-weak {
   background-color: #e62600;
 }
+
 .password-strength__indicator.is-fair {
   background-color: #e09600;
 }
+
 .password-strength__indicator.is-good {
   background-color: #0074bd;
 }
+
 .password-strength__indicator.is-strong {
   background-color: #77b259;
 }
@@ -40,6 +44,7 @@
   padding: 0.2em 0.5em;
   border: 1px solid #b4b4b4;
 }
+
 .password-suggestions ul {
   margin-bottom: 0;
 }
@@ -51,8 +56,9 @@
   max-width: 33em;
   margin: 0;
 }
-[dir="rtl"] .confirm-parent,
-[dir="rtl"] .password-parent {
+
+[dir=rtl] .confirm-parent,
+[dir=rtl] .password-parent {
   clear: right;
 }
 
@@ -61,7 +67,10 @@
   color: #325e1c;
   font-weight: bold;
 }
+
 .password-confirm .error {
   color: #a51b00;
   font-weight: bold;
 }
+
+/*# sourceMappingURL=user.css.map */

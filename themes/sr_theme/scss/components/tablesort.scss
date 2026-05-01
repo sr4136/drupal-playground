@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Table sort indicator.
+ */
+
+@use "../base/variables" as v;
+
+th.is-active img {
+  display: inline;
+}
+td.is-active {
+  background-color: v.$color-table-active;
+}

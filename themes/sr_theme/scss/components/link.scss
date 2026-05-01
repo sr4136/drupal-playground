@@ -1,0 +1,18 @@
+/**
+ * @file
+ * Style another element as a link.
+ */
+
+@use "../base/variables" as v;
+
+button.link {
+  margin: v.$space-0;
+  padding: v.$space-0;
+  cursor: pointer;
+  border: v.$space-0;
+  background: transparent;
+  font-size: v.$space-md;
+}
+label button.link {
+  font-weight: bold;
+}

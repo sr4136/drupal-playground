@@ -1,34 +1,29 @@
-/* Global Vars */
-.block-stever-helloworld {
-    --gray: #ccc;
-    --black: #000;
-    --green: #385;
-    --blue: #358;
-}
-
-/* Giving the body some padding despite the !importants */
-body {
-    padding: 2em !important;
-}
-body.user-logged-in {
-    padding: 8em 2em 2em 2em !important;
+html {
+  --gray: #ccc;
+  --black: #000;
+  --green: #385;
+  --blue: #358;
 }
 
 /* Default styling. */
 .block-stever-helloworld {
-    padding: 1em;
-    margin: 1em;
-    border-left: 5px solid var(--green);
-    outline: 1px solid var(--gray);
+  padding: 1em;
+  margin: 1em;
+  border-left: 5px solid var(--green);
+  outline: 1px solid var(--gray);
 }
+
 .block-stever-helloworld h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 /* Context-specific styling. */
 .block-stever-helloworld.context-block {
-    border-color: var(--green);
+  border-color: var(--green);
 }
+
 .block-stever-helloworld.context-controller {
-    border-color: var(--blue);
+  border-color: var(--blue);
 }
+
+/*# sourceMappingURL=sr-hello.css.map */

@@ -1,0 +1,10 @@
+/**
+ * @file
+ * Visual styles for nodes.
+ */
+
+@use "../base/variables" as v;
+
+.node--unpublished {
+  background-color: v.$color-node-unpublished;
+}
