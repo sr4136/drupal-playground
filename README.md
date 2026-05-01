@@ -83,4 +83,23 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
   - run `sudo service apache2 stop`
   - run `sudo lsof -i :80` to verify it closed
 
+===
 
+-------------------------------
+
+# Enable DevelGenerate & use it to create sample content.
+
+- Enable module
+    - `ddev drush en devel_generate -y`
+- Generate 20 article nodes with lorem ipsum body text
+    - `ddev drush devel-generate:content 20 --bundles=article`
+- Generate 5 basic pages
+    - `ddev drush devel-generate:content 5 --bundles=page`
+- Generate menus (main + footer) with 5 links each
+    - `ddev drush devel-generate:menu --menus=main,footer --links=5`
+- Generate 10 users
+    - `ddev drush devel-generate:users 10`
+- Generate taxonomy terms (replace 'tags' with your vocabulary machine name)
+    - `ddev drush devel-generate:terms 20 --bundles=tags`
+- Clear caches
+    - `ddev drush cr`
