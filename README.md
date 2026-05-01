@@ -83,11 +83,11 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
   - run `sudo service apache2 stop`
   - run `sudo lsof -i :80` to verify it closed
 
-===
 
 -------------------------------
+# Further customizations:
 
-# Enable DevelGenerate & use it to create sample content.
+## 1. Enable DevelGenerate & use it to create sample content.
 
 - Enable module
     - `ddev drush en devel_generate -y`
@@ -103,3 +103,11 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
     - `ddev drush devel-generate:terms 20 --bundles=tags`
 - Clear caches
     - `ddev drush cr`
+
+
+## 2. Convert theme to use SASS
+- update [package.json](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/package.json), add `build` and `watch` scripts with sourcemap params.
+- create base(vairables/mixins/etc) folder: [sr_theme/scss/base](https://github.com/sr4136/drupal-playground/tree/main/themes/sr_theme/scss/base)
+- move *existing* CSS to the sass/comonents directory, replacing repetitive values/params with variables, etc [sr_theme/scss/components](https://github.com/sr4136/drupal-playground/tree/main/themes/sr_theme/scss/base)
+- create *new* sass file [sr_theme/scss/components/global](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/scss/components/global.scss) for global site styles
+  
