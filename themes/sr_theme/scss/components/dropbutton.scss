@@ -6,30 +6,30 @@
 @use "../base/variables" as v;
 
 .js .dropbutton-widget {
-  border: v.$border-width-sm solid v.$color-border-light;
+  border: v.$border-width-sm solid v.$color-neutral-300;
   background-color: v.$text-color-base-inverse;
 }
 .js .dropbutton-widget:hover {
-  border-color: v.$color-border-hover;
+  border-color: v.$color-neutral-400;
 }
 .dropbutton .dropbutton-action > * {
-  padding: v.$space-6xs v.$space-sm;
+  padding: v.$space-2xs v.$space-md;
   white-space: nowrap;
 }
 .dropbutton .secondary-action {
-  border-top: v.$border-width-sm solid v.$color-border-lighter;
+  border-top: v.$border-width-sm solid v.$color-neutral-200;
 }
 .dropbutton-multiple .dropbutton {
-  border-right: v.$border-width-sm solid v.$color-border-lighter; /* LTR */
+  border-right: v.$border-width-sm solid v.$color-neutral-200; /* LTR */
 }
 [dir="rtl"] .dropbutton-multiple .dropbutton {
   border-right: v.$space-0 none;
-  border-left: v.$border-width-sm solid v.$color-border-lighter;
+  border-left: v.$border-width-sm solid v.$color-neutral-200;
 }
 .dropbutton-multiple .dropbutton .dropbutton-action > * {
-  margin-right: v.$space-5xs; /* LTR */
+  margin-right: v.$space-sm; /* LTR */
 }
 [dir="rtl"] .dropbutton-multiple .dropbutton .dropbutton-action > * {
   margin-right: 0;
-  margin-left: v.$space-5xs;
+  margin-left: v.$space-sm;
 }

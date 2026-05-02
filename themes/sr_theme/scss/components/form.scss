@@ -9,7 +9,7 @@ form .field-multiple-table {
   margin: v.$space-0;
 }
 form .field-multiple-table .field-multiple-drag {
-  width: v.$size-table-drag-col;
+  width: v.$size-drag-col;
   padding-right: v.$space-0; /* LTR */
 }
 [dir="rtl"] form .field-multiple-table .field-multiple-drag {
@@ -57,8 +57,8 @@ label.option {
 }
 .form-checkboxes .form-item,
 .form-radios .form-item {
-  margin-top: v.$space-4xs;
-  margin-bottom: v.$space-4xs;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
 }
 .form-type-radio .description,
 .form-type-checkbox .description {
@@ -74,15 +74,15 @@ label.option {
 }
 .form-required::after {
   display: inline-block;
-  width: v.$size-icon-2xs;
-  height: v.$size-icon-2xs;
-  margin: v.$space-0 v.$space-3xs;
+  width: v.$size-icon-xs;
+  height: v.$size-icon-xs;
+  margin: v.$space-0 v.$space-sm;
   content: "";
   vertical-align: super;
   /* Use a background image to prevent screen readers from announcing the text. */
   background-image: url(../../images/icons/required.svg);
   background-repeat: no-repeat;
-  background-size: v.$size-icon-2xs v.$size-icon-2xs;
+  background-size: v.$size-icon-xs v.$size-icon-xs;
 }
 abbr.tabledrag-changed,
 abbr.ajax-changed {

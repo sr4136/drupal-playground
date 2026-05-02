@@ -9,15 +9,15 @@
   font-weight: bold;
 }
 .item-list ul {
-  margin: v.$space-0 v.$space-0 v.$space-md-plus v.$space-0;
+  margin: v.$space-0 v.$space-0 v.$space-three-quarter v.$space-0;
   padding: v.$space-0;
 }
 .item-list li {
-  margin: v.$space-0 v.$space-0 v.$space-5xs v.$space-lg; /* LTR */
+  margin: v.$space-0 v.$space-0 v.$space-sm v.$space-xl; /* LTR */
   padding: v.$space-0;
 }
 [dir="rtl"] .item-list li {
-  margin: v.$space-0 v.$space-lg v.$space-5xs v.$space-0;
+  margin: v.$space-0 v.$space-xl v.$space-sm v.$space-0;
 }
 
 /**

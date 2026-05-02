@@ -7,11 +7,11 @@
 
 .image-preview {
   float: left; /* LTR */
-  padding: v.$space-0 v.$message-icon-offset-x v.$message-icon-offset-x v.$space-0; /* LTR */
+  padding: v.$space-0 v.$message-icon-x v.$message-icon-x v.$space-0; /* LTR */
 }
 [dir="rtl"] .image-preview {
   float: right;
-  padding: v.$space-0 v.$space-0 v.$message-icon-offset-x v.$message-icon-offset-x;
+  padding: v.$space-0 v.$space-0 v.$message-icon-x v.$message-icon-x;
 }
 .image-widget-data {
   float: left; /* LTR */

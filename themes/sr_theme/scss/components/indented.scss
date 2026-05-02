@@ -9,9 +9,9 @@
  * Indent threaded comments.
  */
 .indented {
-  margin-left: v.$size-comments-indent; /* LTR */
+  margin-left: v.$size-indent; /* LTR */
 }
 [dir="rtl"] .indented {
-  margin-right: v.$size-comments-indent;
+  margin-right: v.$size-indent;
   margin-left: v.$space-0;
 }

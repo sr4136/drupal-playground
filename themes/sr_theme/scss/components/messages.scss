@@ -11,7 +11,7 @@
   border: v.$border-width-sm solid;
   border-width: v.$border-width-sm v.$border-width-sm v.$border-width-sm v.$space-0; /* LTR */
   border-radius: v.$radius-sm;
-  background: no-repeat v.$message-icon-offset-x v.$message-icon-offset-y; /* LTR */
+  background: no-repeat v.$message-icon-x v.$message-icon-y; /* LTR */
   overflow-wrap: break-word;
 }
 [dir="rtl"] .messages {
@@ -19,7 +19,7 @@
   padding-left: v.$space-xl;
   text-align: right;
   border-width: v.$border-width-sm v.$space-0 v.$border-width-sm v.$border-width-sm;
-  background-position: right v.$message-icon-offset-x top v.$message-icon-offset-y;
+  background-position: right v.$message-icon-x top v.$message-icon-y;
 }
 .messages + .messages {
   margin-top: v.$message-stack-gap;
@@ -34,37 +34,37 @@
 }
 .messages--status {
   color: v.$text-color-success;
-  border-color: v.$color-message-status-border v.$color-message-status-border v.$color-message-status-border transparent; /* LTR */
-  background-color: v.$color-message-status-bg;
+  border-color: #c9e1bd #c9e1bd #c9e1bd transparent; /* LTR */
+  background-color: #f3faef;
   background-image: url(../../images/icons/check.svg);
-  box-shadow: -1 * v.$message-accent-shadow 0 0 v.$color-password-good; /* LTR */
+  box-shadow: -1 * v.$message-accent-shadow 0 0 #77b259; /* LTR */
 }
 [dir="rtl"] .messages--status {
   margin-left: v.$space-0;
-  border-color: v.$color-message-status-border transparent v.$color-message-status-border v.$color-message-status-border;
-  box-shadow: v.$message-accent-shadow 0 0 v.$color-password-good;
+  border-color: #c9e1bd transparent #c9e1bd #c9e1bd;
+  box-shadow: v.$message-accent-shadow 0 0 #77b259;
 }
 .messages--warning {
   color: v.$text-color-warning-dark;
-  border-color: v.$color-message-warning-border v.$color-message-warning-border v.$color-message-warning-border transparent; /* LTR */
-  background-color: v.$color-message-warning-bg;
+  border-color: #f4daa6 #f4daa6 #f4daa6 transparent; /* LTR */
+  background-color: #fdf8ed;
   background-image: url(../../images/icons/warning.svg);
-  box-shadow: -1 * v.$message-accent-shadow 0 0 v.$color-password-fair; /* LTR */
+  box-shadow: -1 * v.$message-accent-shadow 0 0 v.$color-yellow-500; /* LTR */
 }
 [dir="rtl"] .messages--warning {
-  border-color: v.$color-message-warning-border transparent v.$color-message-warning-border v.$color-message-warning-border;
-  box-shadow: v.$message-accent-shadow 0 0 v.$color-password-fair;
+  border-color: #f4daa6 transparent #f4daa6 #f4daa6;
+  box-shadow: v.$message-accent-shadow 0 0 v.$color-yellow-500;
 }
 .messages--error {
   color: v.$text-color-error-dark;
-  border-color: v.$color-message-error-border v.$color-message-error-border v.$color-message-error-border transparent; /* LTR */
-  background-color: v.$color-message-error-bg;
+  border-color: #f9c9bf #f9c9bf #f9c9bf transparent; /* LTR */
+  background-color: #fcf4f2;
   background-image: url(../../images/icons/error.svg);
-  box-shadow: -1 * v.$message-accent-shadow 0 0 v.$color-password-weak; /* LTR */
+  box-shadow: -1 * v.$message-accent-shadow 0 0 v.$color-red-600; /* LTR */
 }
 [dir="rtl"] .messages--error {
-  border-color: v.$color-message-error-border transparent v.$color-message-error-border v.$color-message-error-border;
-  box-shadow: v.$message-accent-shadow 0 0 v.$color-password-weak;
+  border-color: #f9c9bf transparent #f9c9bf #f9c9bf;
+  box-shadow: v.$message-accent-shadow 0 0 v.$color-red-600;
 }
 .messages--error p.error {
   color: v.$text-color-error-dark;

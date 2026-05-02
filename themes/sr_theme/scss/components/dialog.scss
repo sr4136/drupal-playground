@@ -10,23 +10,23 @@
   z-index: 1260;
   overflow: visible;
   padding: v.$space-0;
-  color: v.$text-color-active;
-  border: solid v.$border-width-sm v.$color-border-light;
-  background: v.$color-dialog-bg;
+  color: v.$color-text-base;
+  border: solid v.$border-width-sm v.$color-neutral-300;
+  background: v.$color-bg-surface;
 }
 
 @media all and (max-width: 48em) {
   /* 768px */
   .ui-dialog {
-    width: 92% !important;
+    width: v.$size-dialog-fluid !important;
   }
 }
 .ui-dialog .ui-dialog-titlebar {
   border-width: v.$space-0 v.$space-0 v.$border-width-sm v.$space-0;
   border-style: solid;
-  border-color: v.$color-border-light;
+  border-color: v.$color-neutral-300;
   border-radius: v.$space-0;
-  background: v.$color-dialog-title-bg;
+  background: v.$color-bg-page;
   font-weight: bold;
 }
 .ui-dialog .ui-dialog-titlebar-close {
@@ -37,8 +37,8 @@
   margin-top: v.$space-0;
   padding: v.$space-xs v.$space-md;
   border-width: v.$border-width-sm v.$space-0 v.$space-0 v.$space-0;
-  border-color: v.$color-border-light;
-  background: v.$color-dialog-title-bg;
+  border-color: v.$color-neutral-300;
+  background: v.$color-bg-page;
 }
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
   margin: v.$space-0;
@@ -61,10 +61,10 @@
   left: 49%;
   width: v.$size-loader;
   height: v.$size-loader;
-  padding: v.$space-px-4;
+  padding: 4px;
   opacity: 0.9;
   border-radius: v.$radius-md;
-  background-color: v.$color-throbber-bg;
+  background-color: #232323;
   background-image: url(../../images/icons/loading-small.svg);
   background-repeat: no-repeat;
   background-position: center center;

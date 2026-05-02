@@ -6,12 +6,12 @@
 @use "../base/variables" as v;
 
 .ui-dialog--narrow {
-  max-width: v.$size-dialog-narrow-max;
+  max-width: v.$size-dialog-narrow;
 }
 
-@media screen and (max-width: v.$size-dialog-narrow-breakpoint) {
+@media screen and (max-width: v.$size-dialog-breakpoint) {
   .ui-dialog--narrow {
-    min-width: v.$size-dialog-narrow-mobile;
-    max-width: v.$size-dialog-narrow-mobile;
+    min-width: v.$size-dialog-mobile;
+    max-width: v.$size-dialog-mobile;
   }
 }

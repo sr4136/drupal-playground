@@ -27,9 +27,9 @@ ul.tabs {
   text-decoration: none;
 }
 .tabs a.is-active {
-  background-color: v.$color-bg-tab-active;
+  background-color: #eee;
 }
 .tabs a:focus,
 .tabs a:hover {
-  background-color: v.$color-bg-tab-hover;
+  background-color: #f5f5f5;
 }

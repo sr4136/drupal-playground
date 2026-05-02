@@ -6,18 +6,18 @@
 @use "../base/variables" as v;
 
 .icon-help {
-  padding: v.$space-px-1 v.$space-0 v.$space-px-1 v.$space-xl; /* LTR */
-  background: url(../../images/icons/help.png) v.$size-help-bg-pos-x-ltr v.$percent-middle no-repeat; /* LTR */
+  padding: v.$space-1px v.$space-0 v.$space-1px v.$space-xl; /* LTR */
+  background: url(../../images/icons/help.png) v.$size-help-bg-x-ltr v.$percent-middle no-repeat; /* LTR */
 }
 [dir="rtl"] .icon-help {
-  padding: v.$space-px-1 v.$space-xl v.$space-px-1 v.$space-0;
-  background-position: v.$size-help-bg-pos-x-rtl v.$percent-middle;
+  padding: v.$space-1px v.$space-xl v.$space-1px v.$space-0;
+  background-position: v.$size-help-bg-x-rtl v.$percent-middle;
 }
 .feed-icon {
   display: block;
   overflow: hidden;
   width: v.$size-icon-md;
   height: v.$size-icon-md;
-  text-indent: v.$size-indent-offscreen;
+  text-indent: v.$size-offscreen;
   background: url(../../images/icons/feed.svg) no-repeat;
 }

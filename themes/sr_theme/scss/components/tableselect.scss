@@ -8,7 +8,7 @@
 @use "../base/variables" as v;
 
 tr.selected td {
-  background: v.$color-table-selected;
+  background: #ffc;
 }
 td.checkbox,
 th.checkbox {
