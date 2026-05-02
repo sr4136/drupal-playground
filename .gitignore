@@ -1,0 +1,7 @@
+# Node / frontend build
+node_modules/
+.npm/
+package-lock.json
+
+# CSS source maps
+*.css.map
