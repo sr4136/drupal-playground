@@ -4,28 +4,29 @@
  */
 
 @use "../base/variables" as v;
+@use "sass:color";
 
 /* Visual styling for the Password strength indicator */
 .password-strength__meter {
   margin-top: v.$space-sm;
-  background-color: v.$color-password-meter;
+  background-color: color.adjust(v.$color-neutral-100, $lightness: -3%);
 }
 .password-strength__indicator {
   -webkit-transition: width 0.5s ease-out;
   transition: width 0.5s ease-out;
-  background-color: v.$color-password-good;
+  background-color: #77b259;
 }
 .password-strength__indicator.is-weak {
-  background-color: v.$color-password-weak;
+  background-color: v.$color-red-600;
 }
 .password-strength__indicator.is-fair {
-  background-color: v.$color-password-fair;
+  background-color: v.$color-yellow-500;
 }
 .password-strength__indicator.is-good {
-  background-color: v.$color-password-strong;
+  background-color: color.adjust(v.$color-brand-primary, $lightness: 8%);
 }
 .password-strength__indicator.is-strong {
-  background-color: v.$color-password-good;
+  background-color: #77b259;
 }
 
 .password-confirm,
@@ -33,14 +34,14 @@
 .password-strength,
 .password-confirm-match,
 .password-confirm-message {
-  width: 55%;
+  width: v.$size-password-strength;
 }
 
 .password-suggestions {
-  max-width: 34.7em;
-  margin: 0.7em 0;
+  max-width: v.$size-password-suggestions;
+  margin: v.$space-input-offset 0;
   padding: v.$space-2xs v.$space-sm;
-  border: v.$border-width-sm solid v.$color-border-weak;
+  border: v.$border-width-sm solid v.$color-neutral-400;
 }
 .password-suggestions ul {
   margin-bottom: 0;
@@ -50,7 +51,7 @@
 .password-parent {
   clear: left; /* LTR */
   overflow: hidden;
-  max-width: 33em;
+  max-width: v.$size-password-parent;
   margin: v.$space-0;
 }
 [dir="rtl"] .confirm-parent,

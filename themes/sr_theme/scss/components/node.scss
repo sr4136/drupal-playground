@@ -6,17 +6,17 @@
 @use "../base/variables" as v;
 
 .node--unpublished {
-  background-color: v.$color-node-unpublished;
+  background-color: #fff4f4;
 }
 
 // ─── Node card (teaser view) ─────────────────────────────────────────────────
 .node--view-mode-teaser,
 .view-content .node {
   background-color: v.$color-bg-surface;
-  border: 1px solid v.$color-border-lighter;
+  border: 1px solid v.$color-neutral-200;
   border-radius: v.$radius-md;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: v.$space-section-md;
+  margin-bottom: v.$space-section-md;
   transition: box-shadow 0.15s ease;
 
   &:hover {
@@ -39,7 +39,7 @@
   .node__submitted {
     font-size: v.$font-size-sm;
     color: v.$color-text-muted;
-    margin-bottom: 0.75rem;
+    margin-bottom: v.$space-three-quarter;
   }
 }
 
@@ -54,6 +54,62 @@
 
     p:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+// ─── Article meta (author + date) ──────────────────────────────────────────
+.node--type-article {
+  .node__content > .field--type-image:not(.field--name-user-picture) {
+    float: right;
+    padding-left: v.$space-section-md;
+    padding-bottom: v.$space-md;
+  }
+
+  @media (max-width: 48rem) {
+    .node__content > .field--type-image:not(.field--name-user-picture) {
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      padding-left: v.$space-0;
+      padding-bottom: v.$space-sm;
+    }
+  }
+
+  .node__meta {
+    display: flex;
+    align-items: center;
+    gap: v.$space-three-quarter;
+    padding: v.$space-md;
+    border: 1px solid v.$color-ith-blue;
+    border-radius: v.$radius-md;
+    margin-bottom: v.$space-section-md;
+
+    .profile,
+    .field--name-user-picture {
+      margin: v.$space-0;
+      flex: 0 0 auto;
+    }
+
+    .field--name-user-picture {
+      img,
+      .image-style-thumbnail {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .node__submitted {
+      margin: v.$space-0;
+      line-height: 1.3;
+
+      .field--name-created {
+        display: block;
+        margin-top: v.$space-xs;
+      }
     }
   }
 }

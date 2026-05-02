@@ -25,3 +25,49 @@
 .field--label-inline .field__label::after {
   content: ":";
 }
+
+// Taxonomy tags field.
+.field--name-field-tags {
+  padding: v.$space-md;
+  border: 1px solid v.$color-ith-blue;
+  border-radius: v.$radius-md;
+  margin-bottom: v.$space-section-md;
+
+  .field__label {
+    margin-bottom: v.$space-sm;
+    color: v.$color-text-muted;
+    font-size: v.$font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .field__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$space-sm;
+  }
+
+  .field__item {
+    margin: 0;
+  }
+
+  .field__item a {
+    display: inline-block;
+    padding: v.$space-2xs v.$space-md v.$space-xs v.$space-md;
+    border: v.$border-width-sm solid v.$color-neutral-300;
+    border-radius: v.$radius-pill;
+    background-color: v.$color-bg-surface;
+    color: v.$color-link-hover;
+    font-size: v.$font-size-sm;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: v.$color-brand-primary;
+      background-color: v.$color-bg-page;
+      color: v.$color-brand-primary;
+    }
+  }
+}
