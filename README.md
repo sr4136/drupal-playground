@@ -120,6 +120,11 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
 	- edit `node.html.twig` to remove the "on" from the published date, since it's on its own line
 - [breadcrumb styling](https://github.com/sr4136/drupal-playground/commit/35740225cb0872aa738aaf94acfe69060c953a97)
 	- edit `breadcrumb.html.twig` and `sr_theme.theme` to show the current page in the breadcrumbs
+- <img width="1169" height="664" alt="firefox_WockCHVa1X" src="https://github.com/user-attachments/assets/79fb28af-2582-49ec-9b16-170b45d650ff" />
+- <img width="1166" height="708" alt="firefox_REwx9FLFSt" src="https://github.com/user-attachments/assets/e2f062d4-e135-4e7b-8937-be94293f15af" />
+- <img width="1175" height="856" alt="firefox_5Pjc1ibJom" src="https://github.com/user-attachments/assets/9d102d20-9250-4895-9827-26d805ad5ffd" />
+
+
 
 ## 4. Add modules: Group & Paragraphs
 - [composer.json: remove unnecessary initialization cruft](https://github.com/sr4136/drupal-playground/commit/92157921ef13f7e9b79f37d36219307522a75ac3)
@@ -132,4 +137,12 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
 	- Configure available content-- enabled "Group node (Article)"
 	- Edit group type permissions-- for the groups' articles permissions
  		<img width="767" height="626" alt="firefox_5T47P5BUKK" src="https://github.com/user-attachments/assets/0530ac6b-52d9-4452-b997-1e81dfbaf283" />
-- 
+- *Paragraphs Module*: rough idea: a "Futher Reading" component with an image and link/description to other pages.
+	- Created Paragraph types: Further Reading Item & Further Reading List.
+		- Further Reading Item contains: Reference to content & description.
+		- Further Reading List contains: Paragraph type (Further Reading Item) & Image.
+	- Added Content Type for Basic Page: Paragraph type
+		- Selected Further Reading List
+	- Edited display for Item & List to hide some of the labels
+ 	-  <img width="986" height="674" alt="firefox_UpbZfZAG5S" src="https://github.com/user-attachments/assets/24aaa710-e1c9-4b80-90aa-bc6896e5b628" />
+
