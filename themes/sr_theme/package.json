@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "sass --source-map scss/components:css/components",
-    "watch": "sass --watch --source-map scss/components:css/components"
+    "watch": "sass --watch --source-map scss:css"
   },
   "devDependencies": {
     "sass": "^1.93.2"
