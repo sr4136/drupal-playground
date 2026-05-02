@@ -145,4 +145,9 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
 		- Selected Further Reading List
 	- Edited display for Item & List to hide some of the labels
  	-  <img width="986" height="674" alt="firefox_UpbZfZAG5S" src="https://github.com/user-attachments/assets/24aaa710-e1c9-4b80-90aa-bc6896e5b628" />
+	- Added twig files to theme for overriding both the [Further Reading Item](https://github.com/sr4136/drupal-playground/blob/abd51635b842a633c7c7125e6c0303c263eb028c/themes/sr_theme/templates/content/paragraph--further-reading.html.twig) & [Further Reading List](https://github.com/sr4136/drupal-playground/blob/abd51635b842a633c7c7125e6c0303c263eb028c/themes/sr_theme/templates/content/paragraph--further-reading-list.html.twig) components.
+   	- Added [paragraphs-components.scss](https://github.com/sr4136/drupal-playground/blob/abd51635b842a633c7c7125e6c0303c263eb028c/themes/sr_theme/scss/components/paragraphs-components.scss) for the two components.
+ 	- Added to new css to [sr_theme.libraries.yml](https://github.com/sr4136/drupal-playground/blob/abd51635b842a633c7c7125e6c0303c263eb028c/themes/sr_theme/sr_theme.libraries.yml#L38)
+  - <img width="939" height="924" alt="firefox_qFaKzKlK1q" src="https://github.com/user-attachments/assets/cd6b7399-c075-4dec-9bb8-901d9f873bc9" />
+
 
