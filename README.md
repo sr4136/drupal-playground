@@ -119,4 +119,16 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
 - [meta styling: author info, tags, publish date](https://github.com/sr4136/drupal-playground/commit/76079df052ec49f508370c3fd68d36667c4f4358)
 	- edit `node.html.twig` to remove the "on" from the published date, since it's on its own line
 - [breadcrumb styling](https://github.com/sr4136/drupal-playground/commit/35740225cb0872aa738aaf94acfe69060c953a97)
-	- edit `breadcrumb.html.twig` and `sr_theme.theme` to show the current page in the breadcrumbs 
+	- edit `breadcrumb.html.twig` and `sr_theme.theme` to show the current page in the breadcrumbs
+
+## 4. Add modules: Group & Paragraphs
+- [composer.json: remove unnecessary initialization cruft](https://github.com/sr4136/drupal-playground/commit/92157921ef13f7e9b79f37d36219307522a75ac3)
+- Install Group & Paragraphs `ddev composer require drupal/group:^3.0 drupal/paragraphs:^1.17` and enable them `ddev drush en group paragraphs -y`
+- Group Module: rough idea: group control for Article content type. 
+	- added "Editorial" group, added two group types: "Editorial Admin" & "Editorial Contributors"
+	- added Michelle as Editorial Admin
+	- added Bob & Carl as Editorial Contributors
+	- Configure available content-- enabled "Group node (Article)"
+	- Edit group type permissions-- for the groups' articles permissions
+ 		<img width="767" height="626" alt="firefox_5T47P5BUKK" src="https://github.com/user-attachments/assets/0530ac6b-52d9-4452-b997-1e81dfbaf283" />
+- 
