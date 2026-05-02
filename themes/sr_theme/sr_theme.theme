@@ -24,10 +24,29 @@ function sr_theme_preprocess_image_widget(array &$variables): void {
 /**
  * Passes data to block template.
  */
-function stever_preprocess_block(&$variables) {
+function sr_theme_preprocess_block(&$variables) {
   // Check if the block is the one you want to modify.
   if ($variables['plugin_id'] == 'hello_world_block') {
 	  // Pass the block title to the block template.
 	  $variables['block_title'] = $variables['label'];
+  }
+}
+
+/**
+ * Passes title to breadcrumb widget.
+ */
+function sr_theme_preprocess_breadcrumb(array &$variables): void {
+  if (empty($variables['title'])) {
+    $route = \Drupal::routeMatch()->getRouteObject();
+    $title = $route ? \Drupal::service('title_resolver')->getTitle(\Drupal::request(), $route) : NULL;
+    if ($title) {
+      $variables['title'] = $title;
+    }
+    else {
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node && method_exists($node, 'label')) {
+        $variables['title'] = $node->label();
+      }
+    }
   }
 }
