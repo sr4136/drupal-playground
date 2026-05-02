@@ -3,11 +3,111 @@
  * Global styles loaded on every page.
  */
 
-body {
-    max-width: 1200px;
-    margin: 0 auto;
-    
-    &.user-logged-in{
-        margin-top: 1em;
+// Load reset and design-token layers first (they output CSS directly).
+@use "../base/reset";
+@use "../base/root";
+@use "../base/variables" as v;
+
+// ─── Base typography ─────────────────────────────────────────────────────────
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body { 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background-color: v.$color-bg-page;
+  color: v.$color-text-base;
+  font-family: v.$font-family-base;
+  font-size: v.$font-size-base;
+  line-height: v.$line-height-body;
+
+  &.user-logged-in {
+    margin-top: 1em;
+  }
+}
+
+// ─── Headings ────────────────────────────────────────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  font-family: v.$font-family-ui;
+  font-weight: v.$font-weight-bold;
+  line-height: v.$line-height-heading;
+  margin: 1.25em 0 0.5em;
+  color: v.$color-text-base;
+}
+h1 { font-size: v.$h1-size; }
+h2 { font-size: v.$h2-size; }
+h3 { font-size: v.$h3-size; }
+h4 { font-size: v.$h4-size; }
+h5 { font-size: v.$h5-size; }
+h6 { font-size: v.$h6-size; }
+
+// ─── Links ───────────────────────────────────────────────────────────────────
+a {
+  color: v.$color-link;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color 0.15s ease;
+
+  &:hover,
+  &:focus {
+    color: v.$color-link-hover;
+    text-decoration-thickness: 2px;
+  }
+}
+
+// ─── Prose helpers ───────────────────────────────────────────────────────────
+p {
+  margin: 0 0 1rem;
+}
+
+// ─── Focus-visible ring (accessibility) ─────────────────────────────────────
+// Restores a clear focus indicator that many contrib modules/resets remove.
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+  border-radius: v.$radius-sm;
+}
+
+// ─── Layout regions ──────────────────────────────────────────────────────────
+.layout-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+header.layout-header {
+  background-color: v.$color-brand-primary;
+  color: v.$color-text-base;
+  padding: 1rem 0;
+
+  // Site name / branding
+  .site-name a {
+    color: #fff;
+    text-decoration: none;
+    font-family: v.$font-family-ui;
+    font-size: v.$h3-size;
+    font-weight: v.$font-weight-bold;
+  }
+}
+
+main.layout-main-wrapper {
+  padding: 2rem 0;
+}
+
+footer.layout-footer {
+  background-color: v.$color-brand-primary;
+  color: #fff;
+  padding: 1.5rem 0;
+  font-size: v.$font-size-sm;
+
+  a {
+    color: rgba(255, 255, 255, 0.85);
+
+    &:hover {
+      color: #fff;
     }
+  }
 }

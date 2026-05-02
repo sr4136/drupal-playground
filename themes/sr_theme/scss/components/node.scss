@@ -8,3 +8,52 @@
 .node--unpublished {
   background-color: v.$color-node-unpublished;
 }
+
+// ─── Node card (teaser view) ─────────────────────────────────────────────────
+.node--view-mode-teaser,
+.view-content .node {
+  background-color: v.$color-bg-surface;
+  border: 1px solid v.$color-border-lighter;
+  border-radius: v.$radius-md;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.15s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .node__title {
+    margin-top: 0;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .node__meta,
+  .node__submitted {
+    font-size: v.$font-size-sm;
+    color: v.$color-text-muted;
+    margin-bottom: 0.75rem;
+  }
+}
+
+// ─── Full node ───────────────────────────────────────────────────────────────
+.node--view-mode-full {
+  .node__title {
+    margin-top: 0;
+  }
+
+  .field--name-body {
+    line-height: v.$line-height-body;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

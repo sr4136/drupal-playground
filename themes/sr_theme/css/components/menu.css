@@ -38,4 +38,49 @@ ul.menu a.is-active {
   color: #000;
 }
 
+.block-system-menu-block--main ul.menu,
+nav[aria-label] ul.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.block-system-menu-block--main .menu-item,
+nav[aria-label] .menu-item {
+  padding: 0;
+}
+.block-system-menu-block--main .menu-item--expanded, .block-system-menu-block--main .menu-item--collapsed,
+nav[aria-label] .menu-item--expanded,
+nav[aria-label] .menu-item--collapsed {
+  list-style: none;
+  list-style-image: none;
+}
+.block-system-menu-block--main a,
+nav[aria-label] a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.block-system-menu-block--main a:hover, .block-system-menu-block--main a:focus,
+nav[aria-label] a:hover,
+nav[aria-label] a:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+.block-system-menu-block--main a.is-active,
+nav[aria-label] a.is-active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
 /*# sourceMappingURL=menu.css.map */

@@ -5,6 +5,7 @@
 
 @use "../base/variables" as v;
 
+// ─── Base menu reset ─────────────────────────────────────────────────────────
 ul.menu {
   margin-left: v.$space-md; /* LTR */
   padding: v.$space-0;
@@ -33,4 +34,52 @@ ul.menu {
 }
 ul.menu a.is-active {
   color: v.$text-color-active;
+}
+
+// ─── Horizontal navigation (header nav block) ────────────────────────────────
+.block-system-menu-block--main,
+nav[aria-label] {
+  ul.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu-item {
+    padding: 0;
+
+    &--expanded,
+    &--collapsed {
+      list-style: none;
+      list-style-image: none;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-family: v.$font-family-ui;
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-bold;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: v.$radius-sm;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    &.is-active {
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+  }
 }

@@ -1,0 +1,85 @@
+/**
+ * @file
+ * Modern CSS reset (adapted from Andy Bell's reset — piccalil.li/blog/a-more-modern-css-reset)
+ * Loaded via global.scss.
+ */
+
+// 1. Universal box-sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// 2. Strip default margins/padding
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// 3. Better text rendering & prevent font scaling in landscape
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  hanging-punctuation: first last;
+}
+
+// 4. Set a sensible min-height and text rendering on body
+body {
+  min-height: 100svh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
+
+// 5. Media defaults
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+// 6. Form elements inherit font
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// 7. Prevent overflow on long words/URLs
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+// 8. Better text wrapping
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+  max-width: 75ch;
+}
+
+// 9. List reset (opt-in via class — preserves Drupal's default list styling elsewhere)
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

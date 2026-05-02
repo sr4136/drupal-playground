@@ -6,4 +6,48 @@
   background-color: #fff4f4;
 }
 
+.node--view-mode-teaser,
+.view-content .node {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 7px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.15s ease;
+}
+.node--view-mode-teaser:hover,
+.view-content .node:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.node--view-mode-teaser .node__title,
+.view-content .node .node__title {
+  margin-top: 0;
+}
+.node--view-mode-teaser .node__title a,
+.view-content .node .node__title a {
+  text-decoration: none;
+}
+.node--view-mode-teaser .node__title a:hover,
+.view-content .node .node__title a:hover {
+  text-decoration: underline;
+}
+.node--view-mode-teaser .node__meta,
+.node--view-mode-teaser .node__submitted,
+.view-content .node .node__meta,
+.view-content .node .node__submitted {
+  font-size: 0.875rem;
+  color: #5c5c5c;
+  margin-bottom: 0.75rem;
+}
+
+.node--view-mode-full .node__title {
+  margin-top: 0;
+}
+.node--view-mode-full .field--name-body {
+  line-height: 1.7;
+}
+.node--view-mode-full .field--name-body p:last-child {
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=node.css.map */

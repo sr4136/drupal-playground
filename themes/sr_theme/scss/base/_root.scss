@@ -1,0 +1,50 @@
+/**
+ * @file
+ * CSS custom properties (design tokens) on :root.
+ * Mirrors the SCSS variables so they're also available to inline styles,
+ * JavaScript, and any CSS file that can't @use SCSS partials.
+ * Loaded via global.scss.
+ */
+
+@use "variables" as v;
+
+:root {
+  // ─── Brand colors ───────────────────────────────────────────────────────
+  --color-brand-primary:   #{v.$color-brand-primary};
+  --color-brand-secondary: #{v.$color-brand-secondary};
+  --color-brand-accent:    #{v.$color-brand-accent};
+
+  // ─── Surfaces & text ────────────────────────────────────────────────────
+  --color-bg-page:    #{v.$color-bg-page};
+  --color-bg-surface: #{v.$color-bg-surface};
+  --color-text-base:  #{v.$color-text-base};
+  --color-text-muted: #{v.$color-text-muted};
+
+  // ─── Links ──────────────────────────────────────────────────────────────
+  --color-link:       #{v.$color-link};
+  --color-link-hover: #{v.$color-link-hover};
+
+  // ─── Typography ─────────────────────────────────────────────────────────
+  --font-base:    #{v.$font-family-base};
+  --font-ui:      #{v.$font-family-ui};
+  --font-mono:    #{v.$font-family-mono};
+
+  --font-size-sm: #{v.$font-size-sm};
+  --font-size-md: #{v.$font-size-base};
+  --font-size-lg: #{v.$font-size-lg};
+
+  --line-height-body:    #{v.$line-height-body};
+  --line-height-heading: #{v.$line-height-heading};
+
+  // ─── Spacing (commonly reused sizes) ────────────────────────────────────
+  --space-sm:  #{v.$space-sm};
+  --space-md:  #{v.$space-md};
+  --space-lg:  #{v.$space-lg};
+  --space-xl:  #{v.$space-xl};
+  --space-2xl: #{v.$space-2xl};
+
+  // ─── Focus ring ─────────────────────────────────────────────────────────
+  --focus-ring-color:  #{v.$color-brand-accent};
+  --focus-ring-offset: 3px;
+  --focus-ring-width:  2px;
+}
