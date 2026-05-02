@@ -4,13 +4,13 @@
  */
 .exposed-filters .filters {
   float: left; /* LTR */
-  margin-right: 1em; /* LTR */
+  margin-right: 0.5em; /* LTR */
 }
 
 [dir=rtl] .exposed-filters .filters {
   float: right;
   margin-right: 0;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 .exposed-filters .form-item {
@@ -34,7 +34,7 @@
 
 /* Current filters */
 .exposed-filters .current-filters {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .exposed-filters .current-filters .placeholder {
@@ -44,13 +44,13 @@
 
 .exposed-filters .additional-filters {
   float: left; /* LTR */
-  margin-right: 1em; /* LTR */
+  margin-right: 0.5em; /* LTR */
 }
 
 [dir=rtl] .exposed-filters .additional-filters {
   float: right;
   margin-right: 0;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 /*# sourceMappingURL=exposed-filters.css.map */

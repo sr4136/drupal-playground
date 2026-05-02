@@ -14,17 +14,56 @@
 .field--label-inline .field__label,
 .field--label-inline > .field__item,
 .field--label-inline .field__items {
-  padding-right: 0.5em;
+  padding-right: 0.3em;
 }
 
 [dir=rtl] .field--label-inline .field__label,
 [dir=rtl] .field--label-inline .field__items {
   padding-right: 0;
-  padding-left: 0.5em;
+  padding-left: 0.3em;
 }
 
 .field--label-inline .field__label::after {
   content: ":";
+}
+
+.field--name-field-tags {
+  padding: 0.5em;
+  border: 1px solid #2a5f8f;
+  border-radius: 7px;
+  margin-bottom: 1.5rem;
+}
+.field--name-field-tags .field__label {
+  margin-bottom: 0.3em;
+  color: #5c5c5c;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.field--name-field-tags .field__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+}
+.field--name-field-tags .field__item {
+  margin: 0;
+}
+.field--name-field-tags .field__item a {
+  display: inline-block;
+  padding: 0.1em 0.5em 0.2em 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 10em;
+  background-color: #fff;
+  color: rgb(28.1059459459, 63.572972973, 95.6940540541);
+  font-size: 0.875rem;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.field--name-field-tags .field__item a:hover, .field--name-field-tags .field__item a:focus-visible {
+  border-color: #2a5f8f;
+  background-color: #f5f5f3;
+  color: #2a5f8f;
 }
 
 /*# sourceMappingURL=field.css.map */

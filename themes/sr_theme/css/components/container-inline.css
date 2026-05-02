@@ -14,7 +14,7 @@
 
 .form-type-radios .container-inline .form-type-radio,
 .form-type-checkboxes .container-inline .form-type-checkbox {
-  margin: 0 1em;
+  margin: 0 0.5em;
 }
 
 .container-inline .form-actions,

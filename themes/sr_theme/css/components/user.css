@@ -4,8 +4,8 @@
  */
 /* Visual styling for the Password strength indicator */
 .password-strength__meter {
-  margin-top: 0.5em;
-  background-color: #ebeae4;
+  margin-top: 0.3em;
+  background-color: rgb(236.4428571429, 237.9892857143, 228.7107142857);
 }
 
 .password-strength__indicator {
@@ -23,7 +23,7 @@
 }
 
 .password-strength__indicator.is-good {
-  background-color: #0074bd;
+  background-color: rgb(51.2627027027, 115.9513513514, 174.5372972973);
 }
 
 .password-strength__indicator.is-strong {
@@ -41,8 +41,8 @@
 .password-suggestions {
   max-width: 34.7em;
   margin: 0.7em 0;
-  padding: 0.2em 0.5em;
-  border: 1px solid #b4b4b4;
+  padding: 0.1em 0.3em;
+  border: 1px solid #b8b8b8;
 }
 
 .password-suggestions ul {

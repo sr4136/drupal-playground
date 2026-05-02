@@ -30,12 +30,12 @@
 }
 
 .dropbutton-multiple .dropbutton .dropbutton-action > * {
-  margin-right: 0.25em; /* LTR */
+  margin-right: 0.3em; /* LTR */
 }
 
 [dir=rtl] .dropbutton-multiple .dropbutton .dropbutton-action > * {
   margin-right: 0;
-  margin-left: 0.25em;
+  margin-left: 0.3em;
 }
 
 /*# sourceMappingURL=dropbutton.css.map */
