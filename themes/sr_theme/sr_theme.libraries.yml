@@ -35,6 +35,8 @@ base:
         weight: -10
       css/components/pager.css:
         weight: -10
+      css/components/paragraphs-components.css:
+        weight: -10
       css/components/tabledrag.css:
         weight: -10
       css/components/tableselect.css:

@@ -1,0 +1,55 @@
+/**
+ * @file
+ * Visual styles for paragraph bundles used by Further Reading components.
+ */
+.paragraph--type--further-reading-list {
+  display: grid;
+  gap: 1.5em;
+  margin: 20px 0;
+  padding: 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #f3f4ee, #fff 35%);
+}
+.paragraph--type--further-reading-list .paragraph__title {
+  margin: 0;
+  line-height: 1.2;
+}
+.paragraph--type--further-reading-list .paragraph__image img {
+  display: block;
+  width: 100%;
+  max-height: 22rem;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.paragraph--type--further-reading-list .paragraph__items {
+  display: grid;
+  gap: 1em;
+}
+@media (min-width: 48rem) {
+  .paragraph--type--further-reading-list {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    align-items: start;
+  }
+  .paragraph--type--further-reading-list .paragraph__title {
+    grid-column: 1/-1;
+  }
+}
+
+.paragraph--type--further-reading {
+  display: grid;
+  gap: 0.5em;
+  padding: 1em;
+  border-left: 4px solid #d96c2b;
+  background-color: #fff;
+  box-shadow: 0 6px 16px rgba(30, 30, 30, 0.08);
+}
+.paragraph--type--further-reading .paragraph__content-reference {
+  font-weight: 700;
+}
+.paragraph--type--further-reading .paragraph__description {
+  color: #5c5c5c;
+  line-height: 1.7;
+}
+
+/*# sourceMappingURL=paragraphs-components.css.map */

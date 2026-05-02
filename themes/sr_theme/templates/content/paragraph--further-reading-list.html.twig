@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override for the Further Reading List (Paragraphs component).
+ */
+#}
+
+<section{{ attributes.addClass('paragraph', 'paragraph--type--further-reading-list') }}>
+  <h2 class="paragraph__title">Further Reading</h2>
+
+  {% if content.field_image %}
+    <div class="paragraph__image">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+
+  {% if content.field_iitem %}
+    <div class="paragraph__items">
+      {{ content.field_iitem }}
+    </div>
+  {% endif %}
+</section>
