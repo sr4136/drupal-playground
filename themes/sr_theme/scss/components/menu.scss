@@ -152,7 +152,7 @@
 
       > ul.menu {
         position: absolute;
-        top: calc(100% + v.$space-menu-tight);
+        top: 100%;
         left: 0;
         z-index: 30;
         min-width: v.$size-menu-dropdown;

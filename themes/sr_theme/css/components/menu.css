@@ -130,7 +130,7 @@
 }
 .region-primary-menu nav > ul.menu > .menu-item > ul.menu {
   position: absolute;
-  top: calc(100% + 0.15rem);
+  top: 100%;
   left: 0;
   z-index: 30;
   min-width: 14rem;
