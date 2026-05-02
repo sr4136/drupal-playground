@@ -111,3 +111,12 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
 - move *existing* CSS to the sass/comonents directory, replacing repetitive values/params with variables, etc [sr_theme/scss/components](https://github.com/sr4136/drupal-playground/tree/main/themes/sr_theme/scss/base)
 - create *new* sass file [sr_theme/scss/components/global](https://github.com/sr4136/drupal-playground/blob/main/themes/sr_theme/scss/components/global.scss) for global site styles
   
+## 3. Add styles & twig/theme customizations
+- [added base reset & rough structure](https://github.com/sr4136/drupal-playground/commit/4125d959f3eb9b14040cb78673c0a1581e68a5bb)
+- [variables unification and cleanup](https://github.com/sr4136/drupal-playground/commit/016d03ab1630be2442ac08e214dbda71bdbc6a89)
+	- then [apply those unified variables to individual files](https://github.com/sr4136/drupal-playground/commit/d96c731371139709141b7e9ab9ef5004a7f1d6f9)
+- [menu styling: horizontal menu, hover dropdown, search box](https://github.com/sr4136/drupal-playground/commit/a48eb09d266ad5177c33e49d5501bfaaf6f17537)
+- [meta styling: author info, tags, publish date](https://github.com/sr4136/drupal-playground/commit/76079df052ec49f508370c3fd68d36667c4f4358)
+	- edit `node.html.twig` to remove the "on" from the published date, since it's on its own line
+- [breadcrumb styling](https://github.com/sr4136/drupal-playground/commit/35740225cb0872aa738aaf94acfe69060c953a97)
+	- edit `breadcrumb.html.twig` and `sr_theme.theme` to show the current page in the breadcrumbs 
