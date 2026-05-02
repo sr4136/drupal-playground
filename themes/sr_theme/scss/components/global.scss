@@ -15,9 +15,9 @@ html {
 }
 
 body { 
-  max-width: 1200px;
+  max-width: v.$size-content-max;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 v.$space-page-inline;
   background-color: v.$color-bg-page;
   color: v.$color-text-base;
   font-family: v.$font-family-base;
@@ -25,7 +25,7 @@ body {
   line-height: v.$line-height-body;
 
   &.user-logged-in {
-    margin-top: 1em;
+    margin-top: v.$space-lg;
   }
 }
 
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: v.$font-family-ui;
   font-weight: v.$font-weight-bold;
   line-height: v.$line-height-heading;
-  margin: 1.25em 0 0.5em;
+  margin: v.$space-heading-top 0 v.$space-md;
   color: v.$color-text-base;
 }
 h1 { font-size: v.$h1-size; }
@@ -48,19 +48,19 @@ h6 { font-size: v.$h6-size; }
 a {
   color: v.$color-link;
   text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-underline-offset: v.$space-xs;
   transition: color 0.15s ease;
 
   &:hover,
   &:focus {
     color: v.$color-link-hover;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: v.$border-width-md;
   }
 }
 
 // ─── Prose helpers ───────────────────────────────────────────────────────────
 p {
-  margin: 0 0 1rem;
+  margin: 0 0 v.$space-lg;
 }
 
 // ─── Focus-visible ring (accessibility) ─────────────────────────────────────
@@ -75,13 +75,29 @@ p {
 .layout-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100dvh;
+}
+
+header[role="banner"] {
+  background-color: v.$color-brand-primary;
+  padding: v.$space-md;
+  color: v.$text-color-base-inverse;
+
+  .site-name a,
+  h2 {
+    color: v.$text-color-base-inverse;
+  }
+}
+
+.block-system-branding-block {
+  display: flex;
+  align-items: center;
+  gap: v.$space-lg;
 }
 
 header.layout-header {
   background-color: v.$color-brand-primary;
   color: v.$color-text-base;
-  padding: 1rem 0;
+  padding: v.$space-section-sm 0;
 
   // Site name / branding
   .site-name a {
@@ -94,20 +110,180 @@ header.layout-header {
 }
 
 main.layout-main-wrapper {
-  padding: 2rem 0;
+  padding: v.$space-section-lg 0;
 }
 
-footer.layout-footer {
-  background-color: v.$color-brand-primary;
-  color: #fff;
-  padding: 1.5rem 0;
+main[role="main"] {
+  position: relative;
+  background-color: v.$color-white;
+  padding-bottom: v.$space-section-lg;
+
+  > #main-content {
+    // Keep the skip-link target in the accessibility tree and out of flex flow.
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+}
+
+main[role="main"]:has(.layout-sidebar-second) {
+  display: flex;
+  align-items: flex-start;
+  gap: v.$space-section-md;
+
+  .layout-content {
+    flex: 1 1 75%;
+    min-width: 0;
+  }
+
+  .layout-sidebar-second {
+    flex: 0 0 25%;
+    width: 25%;
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 48rem) {
+  main[role="main"]:has(.layout-sidebar-second) {
+    display: block;
+
+    .layout-sidebar-second {
+      width: 100%;
+      max-width: 100%;
+      margin-top: v.$space-section-md;
+    }
+  }
+}
+
+.region-footer {
+  background-color: v.$color-ith-blue;
+  color: v.$color-bg-surface;
+  padding: v.$space-lg;
   font-size: v.$font-size-sm;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: v.$space-md;
+ 
+
+  .block-menu.menu--account,
+  nav.menu--account {
+    margin: v.$space-0;
+
+    ul.menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: v.$space-sm;
+      margin: v.$space-0;
+      padding: v.$space-0;
+      list-style: none;
+    }
+
+    .menu-item {
+      display: inline-flex;
+      align-items: center;
+      margin: v.$space-0;
+      padding: v.$space-0;
+
+      & + .menu-item::before {
+        content: "|";
+        margin-right: v.$space-sm;
+        color: rgba(v.$color-bg-surface, 0.65);
+      }
+    }
+
+    .menu-item a {
+      display: inline-block;
+      padding: v.$space-xs v.$space-md;
+      color: v.$color-bg-surface;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        border-color: rgba(v.$color-bg-surface, 0.65);
+        background-color: rgba(v.$color-bg-surface, 0.18);
+      }
+    }
+  }
+
+
+  .block-system-powered-by-block {
+    margin-left: auto;
+
+    span {
+      display: inline-block;
+      opacity: 0.9;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .region-footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .block-system-powered-by-block {
+      margin-left: v.$space-0;
+    }
+  }
 
   a {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(v.$color-bg-surface, 0.9);
 
-    &:hover {
-      color: #fff;
+    &:hover,
+    &:focus-visible {
+      color: v.$color-ith-yellow;
+    }
+  }
+}
+
+
+.region-content {
+  padding: v.$space-lg;
+
+  .page-title {
+    margin: v.$space-quarter 0 v.$space-md 0;
+    padding-left: v.$space-quarter;
+    border-left: v.$border-accent-md solid v.$color-ith-yellow;
+  }
+}
+
+// Account menu block (region-agnostic fallback).
+nav.menu--account {
+  ul.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: v.$space-sm;
+    margin: v.$space-0;
+    padding: v.$space-0;
+    list-style: none;
+  }
+
+  .menu-item {
+    display: inline-flex;
+    align-items: center;
+    margin: v.$space-0;
+    padding: v.$space-0;
+    float: none;
+
+    & + .menu-item::before {
+      content: "|";
+      margin-right: v.$space-sm;
+      color: currentColor;
+      opacity: 0.75;
     }
   }
 }
