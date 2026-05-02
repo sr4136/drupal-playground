@@ -123,8 +123,9 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
 
 ## 4. Add modules: Group & Paragraphs
 - [composer.json: remove unnecessary initialization cruft](https://github.com/sr4136/drupal-playground/commit/92157921ef13f7e9b79f37d36219307522a75ac3)
-- Install Group & Paragraphs `ddev composer require drupal/group:^3.0 drupal/paragraphs:^1.17` and enable them `ddev drush en group paragraphs -y`
-- Group Module: rough idea: group control for Article content type. 
+- [Install Group & Paragraphs](https://github.com/sr4136/drupal-playground/commit/651de47a3a4ca4d2c1ae91c730adf381502fd9ae)
+	- `ddev composer require drupal/group:^3.0 drupal/paragraphs:^1.17` and enable them `ddev drush en group paragraphs -y`
+- *Group Module*: rough idea: group control for Article content type. 
 	- added "Editorial" group, added two group types: "Editorial Admin" & "Editorial Contributors"
 	- added Michelle as Editorial Admin
 	- added Bob & Carl as Editorial Contributors
