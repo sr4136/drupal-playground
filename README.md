@@ -152,6 +152,6 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
 
 
 
-## 4. Linting and Auto-formatting
+## 5. Linting and Auto-formatting
 - via [Prettier & Stylelint](https://github.com/sr4136/drupal-playground/commit/76f98c422a4886501aea5b3b454cd45e066eec03)
 - ran it against [all .scss & .twig files](https://github.com/sr4136/drupal-playground/commit/5b331c7af0754ef74f5213acb6b8200834f6b132)
