@@ -43,7 +43,40 @@
     }
 
     .search-block-form {
-      margin-left: 0;
+      margin: 0;
+      padding: 1em;
+      text-align: left;
+
+      #search-block-form {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      form {
+        display: flex;
+        align-items: stretch;
+        gap: v.$space-sm;
+      }
+
+      .form-item {
+        flex: 1 1 auto;
+        min-width: 0;
+        margin: 0;
+      }
+
+      .form-search {
+        width: 100%;
+      }
+
+      .form-actions {
+        flex: 0 0 auto;
+        margin: 0;
+      }
+
+      .form-submit {
+        flex: 0 0 auto;
+        width: auto;
+      }
     }
   }
 }
@@ -237,15 +270,25 @@
       > .menu-item > ul.menu {
         position: static;
         min-width: 0;
-        margin: v.$space-menu-tight 0 v.$space-menu-mobile-stack v.$space-menu-submenu-indent;
-        padding: v.$space-sm v.$space-quarter;
+        display: none;
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+        margin: 0 0 v.$space-menu-mobile-stack v.$space-menu-submenu-indent;
+        padding: v.$space-sm v.$space-quarter;
         transform: none;
         transition: none;
         box-shadow: none;
         border-left: 2px solid v.$color-brand-primary;
+      }
+
+      > .menu-item:hover > ul.menu,
+      > .menu-item:focus-within > ul.menu,
+      > .menu-item.menu-item--active-trail > ul.menu,
+      > .menu-item > a[aria-current="page"] + ul.menu,
+      > .menu-item > a.is-active + ul.menu,
+      > .menu-item > span.is-active + ul.menu {
+        display: block;
       }
     }
   }
