@@ -4,9 +4,17 @@
   "private": true,
   "scripts": {
     "build": "sass --source-map scss/components:css/components",
-    "watch": "sass --watch --source-map scss:css"
+    "watch": "sass --watch --source-map scss:css",
+    "format": "prettier --write \"scss/**/*.scss\"",
+    "format:check": "prettier --check \"scss/**/*.scss\"",
+    "lint:scss": "stylelint \"scss/**/*.scss\"",
+    "lint:scss:fix": "stylelint \"scss/**/*.scss\" --fix"
   },
   "devDependencies": {
-    "sass": "^1.93.2"
+    "prettier": "^2.8.8",
+    "sass": "^1.93.2",
+    "stylelint": "^16.25.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^15.0.1"
   }
 }
