@@ -1,4 +1,4 @@
-{% extends "block.html.twig" %}
+{% extends 'block.html.twig' %}
 {#
 /**
  * @file
@@ -7,6 +7,8 @@
 #}
 {% block content %}
   {% if content %}
-    <nav class="action-links">{{ content }}</nav>
+    <nav class="action-links">
+      {{ content }}
+    </nav>
   {% endif %}
 {% endblock %}

@@ -43,14 +43,14 @@
 <table{{ attributes.addClass(classes) }}>
   {% if caption_needed %}
     <caption>
-    {% if caption %}
-      {{ caption }}
-    {% else %}
-      {{ title }}
-    {% endif %}
-    {% if (summary_element is not empty) %}
-      {{ summary_element }}
-    {% endif %}
+      {% if caption %}
+        {{ caption }}
+      {% else %}
+        {{ title }}
+      {% endif %}
+      {% if (summary_element is not empty) %}
+        {{ summary_element }}
+      {% endif %}
     </caption>
   {% endif %}
   {% if header %}

@@ -12,7 +12,10 @@
   border-color: v.$color-neutral-400;
   border-radius: 10em;
   background-color: color.adjust(v.$color-bg-page, $lightness: -1.5%);
-  background-image: linear-gradient(color.adjust(v.$color-bg-page, $lightness: -5%), color.adjust(v.$color-bg-page, $lightness: -2%));
+  background-image: linear-gradient(
+    color.adjust(v.$color-bg-page, $lightness: -5%),
+    color.adjust(v.$color-bg-page, $lightness: -2%)
+  );
   box-shadow: inset 0 1px 3px hsl(0, 0%, 0%, 0.16);
 }
 .progress__bar {
@@ -26,7 +29,21 @@
   border: 1px color.adjust(v.$color-brand-primary, $lightness: -10%) solid;
   border-radius: 10em;
   background: color.adjust(v.$color-brand-primary, $lightness: 5%);
-  background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.15)), linear-gradient(to right bottom, color.adjust(v.$color-brand-primary, $lightness: 15%) 0%, color.adjust(v.$color-brand-primary, $lightness: 15%) 25%, color.adjust(v.$color-brand-primary, $lightness: -1%) 25%, color.adjust(v.$color-brand-primary, $lightness: -1%) 50%, color.adjust(v.$color-brand-primary, $lightness: 15%) 50%, color.adjust(v.$color-brand-primary, $lightness: 15%) 75%, color.adjust(v.$color-brand-primary, $lightness: 15%) 100%);
+  background-image: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0, 0),
+      rgb(0, 0, 0, 0.15)
+    ),
+    linear-gradient(
+      to right bottom,
+      color.adjust(v.$color-brand-primary, $lightness: 15%) 0%,
+      color.adjust(v.$color-brand-primary, $lightness: 15%) 25%,
+      color.adjust(v.$color-brand-primary, $lightness: -1%) 25%,
+      color.adjust(v.$color-brand-primary, $lightness: -1%) 50%,
+      color.adjust(v.$color-brand-primary, $lightness: 15%) 50%,
+      color.adjust(v.$color-brand-primary, $lightness: 15%) 75%,
+      color.adjust(v.$color-brand-primary, $lightness: 15%) 100%
+    );
   background-size: v.$size-progress-height v.$size-progress-height;
 }
 [dir="rtl"] .progress__bar {
@@ -49,13 +66,9 @@
  */
 @keyframes animate-stripes {
   0% {
-    background-position:
-      0 0,
-      0 0;
+    background-position: 0 0, 0 0;
   }
   100% {
-    background-position:
-      0 0,
-      v.$size-progress-anim 0;
+    background-position: 0 0, v.$size-progress-anim 0;
   }
 }

@@ -1,4 +1,4 @@
-{% extends "item-list.html.twig" %}
+{% extends 'item-list.html.twig' %}
 {#
 /**
  * @file
@@ -20,10 +20,5 @@
  * @see \Drupal\Core\Theme\ThemePreprocess::preprocessItemList()
  */
 #}
-{%
-  set classes = [
-    'search-results',
-    context.plugin ~ '-results',
-  ]
-%}
+{% set classes = ['search-results', context.plugin ~ '-results'] %}
 {% set attributes = attributes.addClass(classes) %}

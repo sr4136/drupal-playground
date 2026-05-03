@@ -24,13 +24,11 @@
   {% endif %}
 
   <{{ list.type }}{{ list.attributes }}>
-
     {% for row in rows %}
       <li{{ row.attributes }}>
         {{- row.content -}}
       </li>
     {% endfor %}
-
   </{{ list.type }}>
 
 {% if attributes -%}

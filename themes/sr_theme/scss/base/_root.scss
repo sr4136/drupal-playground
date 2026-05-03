@@ -10,41 +10,41 @@
 
 :root {
   // ─── Brand colors ───────────────────────────────────────────────────────
-  --color-brand-primary:   #{v.$color-brand-primary};
+  --color-brand-primary: #{v.$color-brand-primary};
   --color-brand-secondary: #{v.$color-brand-secondary};
-  --color-brand-accent:    #{v.$color-brand-accent};
+  --color-brand-accent: #{v.$color-brand-accent};
 
   // ─── Surfaces & text ────────────────────────────────────────────────────
-  --color-bg-page:    #{v.$color-bg-page};
+  --color-bg-page: #{v.$color-bg-page};
   --color-bg-surface: #{v.$color-bg-surface};
-  --color-text-base:  #{v.$color-text-base};
+  --color-text-base: #{v.$color-text-base};
   --color-text-muted: #{v.$color-text-muted};
 
   // ─── Links ──────────────────────────────────────────────────────────────
-  --color-link:       #{v.$color-link};
+  --color-link: #{v.$color-link};
   --color-link-hover: #{v.$color-link-hover};
 
   // ─── Typography ─────────────────────────────────────────────────────────
-  --font-base:    #{v.$font-family-base};
-  --font-ui:      #{v.$font-family-ui};
-  --font-mono:    #{v.$font-family-mono};
+  --font-base: #{v.$font-family-base};
+  --font-ui: #{v.$font-family-ui};
+  --font-mono: #{v.$font-family-mono};
 
   --font-size-sm: #{v.$font-size-sm};
   --font-size-md: #{v.$font-size-base};
   --font-size-lg: #{v.$font-size-lg};
 
-  --line-height-body:    #{v.$line-height-body};
+  --line-height-body: #{v.$line-height-body};
   --line-height-heading: #{v.$line-height-heading};
 
   // ─── Spacing (commonly reused sizes) ────────────────────────────────────
-  --space-sm:  #{v.$space-sm};
-  --space-md:  #{v.$space-md};
-  --space-lg:  #{v.$space-lg};
-  --space-xl:  #{v.$space-xl};
+  --space-sm: #{v.$space-sm};
+  --space-md: #{v.$space-md};
+  --space-lg: #{v.$space-lg};
+  --space-xl: #{v.$space-xl};
   --space-2xl: #{v.$space-2xl};
 
   // ─── Focus ring ─────────────────────────────────────────────────────────
-  --focus-ring-color:  #{v.$color-brand-accent};
+  --focus-ring-color: #{v.$color-brand-accent};
   --focus-ring-offset: 3px;
-  --focus-ring-width:  2px;
+  --focus-ring-width: 2px;
 }

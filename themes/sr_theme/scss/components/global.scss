@@ -14,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body { 
+body {
   max-width: v.$size-content-max;
   margin: 0 auto;
   padding: 0 v.$space-page-inline;
@@ -30,19 +30,36 @@ body {
 }
 
 // ─── Headings ────────────────────────────────────────────────────────────────
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: v.$font-family-ui;
   font-weight: v.$font-weight-bold;
   line-height: v.$line-height-heading;
   margin: v.$space-heading-top 0 v.$space-md;
   color: v.$color-text-base;
 }
-h1 { font-size: v.$h1-size; }
-h2 { font-size: v.$h2-size; }
-h3 { font-size: v.$h3-size; }
-h4 { font-size: v.$h4-size; }
-h5 { font-size: v.$h5-size; }
-h6 { font-size: v.$h6-size; }
+h1 {
+  font-size: v.$h1-size;
+}
+h2 {
+  font-size: v.$h2-size;
+}
+h3 {
+  font-size: v.$h3-size;
+}
+h4 {
+  font-size: v.$h4-size;
+}
+h5 {
+  font-size: v.$h5-size;
+}
+h6 {
+  font-size: v.$h6-size;
+}
 
 // ─── Links ───────────────────────────────────────────────────────────────────
 a {
@@ -160,10 +177,8 @@ main[role="main"]:has(.layout-sidebar-second) {
       h2 {
         margin-top: 0;
       }
-   }
+    }
   }
-
-  
 }
 
 @media (max-width: 48rem) {
@@ -187,7 +202,6 @@ main[role="main"]:has(.layout-sidebar-second) {
   flex-wrap: wrap;
   align-items: center;
   gap: v.$space-md;
- 
 
   .block-menu.menu--account,
   nav.menu--account {
@@ -230,7 +244,6 @@ main[role="main"]:has(.layout-sidebar-second) {
     }
   }
 
-
   .block-system-powered-by-block {
     margin-left: auto;
 
@@ -260,7 +273,6 @@ main[role="main"]:has(.layout-sidebar-second) {
     }
   }
 }
-
 
 .region-content {
   padding: v.$space-lg;

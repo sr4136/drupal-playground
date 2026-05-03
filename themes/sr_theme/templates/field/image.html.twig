@@ -10,9 +10,5 @@
  * @see \Drupal\Core\Theme\ImagePreprocess::preprocessImage()
  */
 #}
-{%
-set classes = [
-  style_name ? 'image-style-' ~ style_name|clean_class,
-]
-%}
-<img{{ attributes.addClass(classes) }} />
+{% set classes = [style_name ? 'image-style-' ~ (style_name|clean_class)] %}
+<img {{ attributes.addClass(classes) }} />

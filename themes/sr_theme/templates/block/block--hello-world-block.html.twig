@@ -1,16 +1,19 @@
-
 {% set additional_classes = ['block-stever-helloworld', 'stever-helloworld'] %}
 
-{% if content['#additional_data'] is defined and content['#additional_data'].context is defined %}
-    {% set context_class = 'context-' ~ content['#additional_data'].context %}
-    {% set additional_classes = additional_classes + [context_class] %}
+{% if
+  content['#additional_data'] is defined
+    and content['#additional_data'].context is defined %}
+  {% set context_class = 'context-' ~ content['#additional_data'].context %}
+  {% set additional_classes = additional_classes + [context_class] %}
 {% endif %}
 
-<div{{ attributes.addClass(additional_classes) }}>
-    {% if label is defined %}
-        <h2>{{ label }}</h2>
-    {% endif %}
-    <div class="content">
-        {{ content }}
-    </div>
+<div {{ attributes.addClass(additional_classes) }}>
+  {% if label is defined %}
+    <h2>
+      {{ label }}
+    </h2>
+  {% endif %}
+  <div class="content">
+    {{ content }}
+  </div>
 </div>

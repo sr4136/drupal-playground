@@ -1,19 +1,19 @@
 @use "../base/variables" as v;
 
 .block-stever-helloworld {
-    padding: v.$space-lg;
-    margin: v.$space-lg v.$space-lg 0 0;
-    border-left: 5px solid v.$color-green-700;
-    outline: 1px solid v.$color-neutral-400;
+  padding: v.$space-lg;
+  margin: v.$space-lg v.$space-lg 0 0;
+  border-left: 5px solid v.$color-green-700;
+  outline: 1px solid v.$color-neutral-400;
 }
 .block-stever-helloworld h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 /* Context-specific styling. */
 .block-stever-helloworld.context-block {
-    border-color: v.$color-green-700;
+  border-color: v.$color-green-700;
 }
 .block-stever-helloworld.context-controller {
-    border-color: v.$color-orange-600;
+  border-color: v.$color-orange-600;
 }

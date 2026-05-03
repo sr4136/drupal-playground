@@ -12,7 +12,11 @@
   padding: v.$space-xl;
   border: v.$border-width-sm solid v.$border-color-neutral;
   border-radius: v.$radius-md;
-  background: linear-gradient(180deg, v.$color-neutral-100, v.$color-bg-surface 35%);
+  background: linear-gradient(
+    180deg,
+    v.$color-neutral-100,
+    v.$color-bg-surface 35%
+  );
 
   .paragraph__title {
     margin: 0;

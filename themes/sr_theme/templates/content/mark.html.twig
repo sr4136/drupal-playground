@@ -12,9 +12,9 @@
  */
 #}
 {% if logged_in %}
-  {% if status is constant('MARK_NEW') %}
+  {% if status is (MARK_NEW) %}
     <span class="marker">{{ 'New'|t }}</span>
-  {% elseif status is constant('MARK_UPDATED') %}
+  {% elseif status is (MARK_UPDATED) %}
     <span class="marker">{{ 'Updated'|t }}</span>
   {% endif %}
 {% endif %}

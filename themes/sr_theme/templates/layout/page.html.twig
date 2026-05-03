@@ -43,7 +43,6 @@
  */
 #}
 <div class="layout-container">
-
   <header role="banner">
     {{ page.header }}
   </header>
@@ -62,7 +61,8 @@
 
     <div class="layout-content">
       {{ page.content }}
-    </div>{# /.layout-content #}
+    </div>
+    {# /.layout-content #}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
@@ -75,12 +75,10 @@
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
-
   </main>
 
-	{% if page.footer %}
-		{% include '@sr_theme/layout/footer.html.twig' %}
-	{% endif %}
-
-
-</div>{# /.layout-container #}
+  {% if page.footer %}
+    {% include '@sr_theme/layout/footer.html.twig' %}
+  {% endif %}
+</div>
+{# /.layout-container #}

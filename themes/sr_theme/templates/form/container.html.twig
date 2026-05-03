@@ -19,10 +19,10 @@
  * @see \Drupal\Core\Theme\ThemePreprocess::preprocessContainer()
  */
 #}
-{%
-  set classes = [
-    has_parent ? 'js-form-wrapper',
-    has_parent ? 'form-wrapper',
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>{{ children }}</div>
+{% set classes = [
+  has_parent ? 'js-form-wrapper',
+  has_parent ? 'form-wrapper'
+] %}
+<div {{ attributes.addClass(classes) }}>
+  {{ children }}
+</div>

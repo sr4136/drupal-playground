@@ -11,12 +11,7 @@
  */
 #}
 {{ attach_library('sr_theme/file') }}
-{%
-  set classes = [
-    'js-form-managed-file',
-    'form-managed-file',
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>
+{% set classes = ['js-form-managed-file', 'form-managed-file'] %}
+<div {{ attributes.addClass(classes) }}>
   {{ element }}
 </div>

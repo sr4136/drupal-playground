@@ -9,7 +9,9 @@
   padding: v.$rtl-inline-reset v.$space-xl v.$rtl-inline-reset v.$space-2xl; /* LTR */
   word-wrap: break-word;
   border: v.$border-width-sm solid;
-  border-width: v.$border-width-sm v.$border-width-sm v.$border-width-sm v.$space-0; /* LTR */
+  border-width: v.$border-width-sm v.$border-width-sm v.$border-width-sm
+    v.$space-0; /* LTR */
+
   border-radius: v.$radius-sm;
   background: no-repeat v.$message-icon-x v.$message-icon-y; /* LTR */
   overflow-wrap: break-word;
@@ -18,7 +20,8 @@
   padding-right: v.$space-2xl;
   padding-left: v.$space-xl;
   text-align: right;
-  border-width: v.$border-width-sm v.$space-0 v.$border-width-sm v.$border-width-sm;
+  border-width: v.$border-width-sm v.$space-0 v.$border-width-sm
+    v.$border-width-sm;
   background-position: right v.$message-icon-x top v.$message-icon-y;
 }
 .messages + .messages {

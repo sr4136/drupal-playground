@@ -17,13 +17,10 @@
  * @see \Drupal\filter\FilterThemeHooks::preprocessFilterGuidelines()
  */
 #}
-{%
-  set classes = [
-    'filter-guidelines-item',
-    'filter-guidelines-' ~ format.id,
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>
-  <h4 class="label">{{ format.label }}</h4>
+{% set classes = ['filter-guidelines-item', 'filter-guidelines-' ~ format.id] %}
+<div {{ attributes.addClass(classes) }}>
+  <h4 class="label">
+    {{ format.label }}
+  </h4>
   {{ tips }}
 </div>

@@ -5,8 +5,15 @@
  */
 #}
 
-<section{{ attributes.addClass('paragraph', 'paragraph--type--further-reading-list') }}>
-  <h2 class="paragraph__title">Further Reading</h2>
+<section {{
+  attributes.addClass(
+    'paragraph',
+    'paragraph--type--further-reading-list'
+  )
+  }}>
+  <h2 class="paragraph__title">
+    Further Reading
+  </h2>
 
   {% if content.field_image %}
     <div class="paragraph__image">

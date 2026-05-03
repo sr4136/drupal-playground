@@ -2,22 +2,22 @@
 // Clean T-shirt scale. Old confusing sub-xs names (2xs/3xs/4xs/5xs/6xs)
 // replaced with an ascending sequence; duplicate 0.3em vars merged into $space-sm.
 
-$space-0:    0;
-$space-1px:  1px;      // hairline; borders and fine offsets
+$space-0: 0;
+$space-1px: 1px; // hairline; borders and fine offsets
 
 // Em scale — ascending
-$space-2xs:  0.1em;    // micro nudge
-$space-xs:   0.2em;    // extra-small
-$space-sm:   0.3em;    // small
-$space-md:   0.5em;    // medium / half-em
-$space-lg:   1em;      // large / base unit
-$space-xl:   1.5em;    // extra-large
-$space-xxl:   3em;     // xx-large
+$space-2xs: 0.1em; // micro nudge
+$space-xs: 0.2em; // extra-small
+$space-sm: 0.3em; // small
+$space-md: 0.5em; // medium / half-em
+$space-lg: 1em; // large / base unit
+$space-xl: 1.5em; // extra-large
+$space-xxl: 3em; // xx-large
 $space-input-offset: 0.7em;
 
 // Pixel layout spacing
-$space-2xl:  20px;
-$space-3xl:  35px;
+$space-2xl: 20px;
+$space-3xl: 35px;
 $space-quarter: 0.25em;
 $space-three-quarter: 0.75em;
 
@@ -41,78 +41,78 @@ $space-menu-submenu-indent: 0.8rem;
 // ── Sizes ─────────────────────────────────────────────────────────────────
 
 // Icons
-$size-icon-xs:           6px;
-$size-icon-sm:           14px;
-$size-icon-md:           16px;
-$size-icon-lg:           20px;
+$size-icon-xs: 6px;
+$size-icon-sm: 14px;
+$size-icon-md: 16px;
+$size-icon-lg: 20px;
 
 // Component sizes
-$size-loader:            24px;
-$size-drag-col:          30px;
-$size-full:              100%;
-$size-offscreen:        -9999px;
-$size-indent:            25px;
-$size-content-max:       1200px;
-$size-dialog-fluid:      92%;
+$size-loader: 24px;
+$size-drag-col: 30px;
+$size-full: 100%;
+$size-offscreen: -9999px;
+$size-indent: 25px;
+$size-content-max: 1200px;
+$size-dialog-fluid: 92%;
 $size-password-strength: 55%;
 $size-password-suggestions: 34.7em;
-$size-password-parent:   33em;
+$size-password-parent: 33em;
 
 // Menu sizes
-$size-menu-basis:        30rem;
-$size-menu-search:       18rem;
-$size-menu-dropdown:     14rem;
-$size-menu-link-min:     2.7rem;
+$size-menu-basis: 30rem;
+$size-menu-search: 18rem;
+$size-menu-dropdown: 14rem;
+$size-menu-link-min: 2.7rem;
 $size-menu-sub-link-min: 2.4rem;
-$size-menu-chevron:      0.32rem;
-$size-menu-chevron-top:  0.42rem;
+$size-menu-chevron: 0.32rem;
+$size-menu-chevron-top: 0.42rem;
 
 // Filter form
-$size-filter-label:      10em;
-$size-filter-select:     14em;
+$size-filter-label: 10em;
+$size-filter-select: 14em;
 
 // Progress bar
-$size-progress-height:   40px;
-$size-progress-anim:    -80px;
+$size-progress-height: 40px;
+$size-progress-anim: -80px;
 
 // Dialog narrow variant
-$size-dialog-narrow:     500px;
+$size-dialog-narrow: 500px;
 $size-dialog-breakpoint: 600px;
-$size-dialog-mobile:     95%;
+$size-dialog-mobile: 95%;
 
 // Icon help background position
-$size-help-bg-x-ltr:     0;
-$size-help-bg-x-rtl:     100%;
+$size-help-bg-x-ltr: 0;
+$size-help-bg-x-rtl: 100%;
 
 // ── Borders & Radii ───────────────────────────────────────────────────────
 
-$border-width-sm:  1px;
-$border-width-md:  2px;
+$border-width-sm: 1px;
+$border-width-md: 2px;
 
-$radius-sm:   2px;
-$radius-md:   7px;
+$radius-sm: 2px;
+$radius-md: 7px;
 $radius-pill: 10em;
 $outline-offset-md: 2px;
 $border-accent-md: 4px;
 
 // ── Typography helpers ────────────────────────────────────────────────────
 
-$offset-xs-neg:          -0.1em;
-$line-height-loose:       160%;
-$text-size-description:   0.85em;
+$offset-xs-neg: -0.1em;
+$line-height-loose: 160%;
+$text-size-description: 0.85em;
 
 // ── Form / layout helpers ─────────────────────────────────────────────────
 
-$description-offset:      2.4em;
+$description-offset: 2.4em;
 $percent-controls-offset: 2%;
-$form-separator-offset:   2.3em;
-$percent-middle:          50%;
-$rtl-inline-reset:        15px;
+$form-separator-offset: 2.3em;
+$percent-middle: 50%;
+$rtl-inline-reset: 15px;
 
 // ── Messages ──────────────────────────────────────────────────────────────
 
-$message-stack-gap:       1.538em;
-$message-item-gap:        0.769em;
-$message-icon-x:          10px;
-$message-icon-y:          17px;
-$message-accent-shadow:   8px;
+$message-stack-gap: 1.538em;
+$message-item-gap: 0.769em;
+$message-icon-x: 10px;
+$message-icon-y: 17px;
+$message-accent-shadow: 8px;

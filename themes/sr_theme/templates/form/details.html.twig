@@ -15,15 +15,15 @@
  * @see\Drupal\Core\Form\FormPreprocess::preprocessDetails()
  */
 #}
-<details{{ attributes }}>
+<details {{ attributes }}>
   {%- if title -%}
-    {%
-      set summary_classes = [
-        required ? 'js-form-required',
-        required ? 'form-required',
-      ]
-    %}
-    <summary{{ summary_attributes.addClass(summary_classes) }}>{{ title }}</summary>
+    {% set summary_classes = [
+      required ? 'js-form-required',
+      required ? 'form-required'
+    ] %}
+    <summary {{ summary_attributes.addClass(summary_classes) }}>
+      {{ title }}
+    </summary>
   {%- endif -%}
   <div class="details-wrapper">
     {% if errors %}
@@ -32,8 +32,14 @@
       </div>
     {% endif %}
     {%- if description -%}
-      {% set description_attributes = create_attribute({id: attributes['aria-describedby']}) %}
-      <div{{ description_attributes.addClass(['details-description']) }}>{{ description }}</div>
+      {% set description_attributes =
+        create_attribute({
+          id: attributes['aria-describedby']
+        })
+      %}
+      <div {{ description_attributes.addClass(['details-description']) }}>
+        {{ description }}
+      </div>
     {%- endif -%}
     {%- if children -%}
       {{ children }}

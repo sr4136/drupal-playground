@@ -7,7 +7,8 @@
 
 .icon-help {
   padding: v.$space-1px v.$space-0 v.$space-1px v.$space-xl; /* LTR */
-  background: url(../../images/icons/help.png) v.$size-help-bg-x-ltr v.$percent-middle no-repeat; /* LTR */
+  background: url(../../images/icons/help.png) v.$size-help-bg-x-ltr
+    v.$percent-middle no-repeat; /* LTR */
 }
 [dir="rtl"] .icon-help {
   padding: v.$space-1px v.$space-xl v.$space-1px v.$space-0;

@@ -5,7 +5,12 @@
  */
 #}
 
-<article{{ attributes.addClass('paragraph', 'paragraph--type--further-reading') }}>
+<article {{
+  attributes.addClass(
+    'paragraph',
+    'paragraph--type--further-reading'
+  )
+  }}>
   {% if content.field_content %}
     <div class="paragraph__content-reference">
       {{ content.field_content }}
