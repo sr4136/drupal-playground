@@ -151,7 +151,19 @@ main[role="main"]:has(.layout-sidebar-second) {
     flex: 0 0 25%;
     width: 25%;
     max-width: 25%;
+    margin-top: v.$space-xxl;
+
+    .contextual-region {
+      padding: v.$space-lg;
+      margin-right: v.$space-lg;
+
+      h2 {
+        margin-top: 0;
+      }
+   }
   }
+
+  
 }
 
 @media (max-width: 48rem) {

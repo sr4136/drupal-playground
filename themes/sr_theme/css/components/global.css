@@ -265,6 +265,14 @@ main[role=main]:has(.layout-sidebar-second) .layout-sidebar-second {
   flex: 0 0 25%;
   width: 25%;
   max-width: 25%;
+  margin-top: 3em;
+}
+main[role=main]:has(.layout-sidebar-second) .layout-sidebar-second .contextual-region {
+  padding: 1em;
+  margin-right: 1em;
+}
+main[role=main]:has(.layout-sidebar-second) .layout-sidebar-second .contextual-region h2 {
+  margin-top: 0;
 }
 
 @media (max-width: 48rem) {
