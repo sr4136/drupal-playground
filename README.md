@@ -137,7 +137,7 @@ Demo of the below at: [https://steverudolfi.com/misc/drupal/hello](https://steve
 	- Configure available content-- enabled "Group node (Article)"
 	- Edit group type permissions-- for the groups' articles permissions
  		<img width="767" height="626" alt="firefox_5T47P5BUKK" src="https://github.com/user-attachments/assets/0530ac6b-52d9-4452-b997-1e81dfbaf283" />
-- *Paragraphs Module*: rough idea: a "Futher Reading" component with an image and link/description to other pages.
+- *Paragraphs Module*: rough idea: a "Further Reading" or "More Resources" component with an image and link/description to other pages.
 	- Created Paragraph types: Further Reading Item & Further Reading List.
 		- Further Reading Item contains: Reference to content & description.
 		- Further Reading List contains: Paragraph type (Further Reading Item) & Image.
